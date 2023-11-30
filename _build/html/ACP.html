@@ -7,9 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7. Análisis de Componentes Principales &#8212; Técnicas de Machine Learning con Python</title>
+    <title>8. Análisis de Componentes Principales &#8212; Técnicas de Machine Learning con Python</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ACP';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="6. Modelos de Probabilidad" href="ProbModels.html" />
+    <link rel="prev" title="7. Modelos de Probabilidad" href="ProbModels.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,10 +165,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Descriptiva.html">4. Estadística Descriptiva &amp; Pruebas de hipótesis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Regresion.html">5. Regresión lineal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProbModels.html">6. Modelos de Probabilidad</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Análisis de Componentes Principales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Descriptiva.html">4. Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PruebasHipotesis.html">5. Pruebas de hipótesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regresion.html">6. Regresión lineal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProbModels.html">7. Modelos de Probabilidad</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Análisis de Componentes Principales</a></li>
 </ul>
 
     </div>
@@ -362,9 +363,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento1">7.1. Planteamiento</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">7.1.1. Notación</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-primer-componente">7.1.2. Cálculo del primer componente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento1">8.1. Planteamiento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">8.1.1. Notación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-primer-componente">8.1.2. Cálculo del primer componente</a></li>
 </ul>
 </li>
 </ul>
@@ -379,15 +380,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="analisis-de-componentes-principales">
-<h1><span class="section-number">7. </span>Análisis de Componentes Principales<a class="headerlink" href="#analisis-de-componentes-principales" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Análisis de Componentes Principales<a class="headerlink" href="#analisis-de-componentes-principales" title="Permalink to this heading">#</a></h1>
 <section id="planteamiento1">
-<h2><span class="section-number">7.1. </span>Planteamiento<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#planteamiento1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>Planteamiento<a class="footnote-reference brackets" href="#id2" id="id1">1</a><a class="headerlink" href="#planteamiento1" title="Permalink to this heading">#</a></h2>
 <p>Se aplica a tablas de datos donde las filas son considerados como individuos y las columnas como datos cuantitativos.</p>
 <p>Más formalmente, se dispone de los valores de <span class="math notranslate nohighlight">\(p\)</span> variables y <span class="math notranslate nohighlight">\(n\)</span> elementos dispuestos en una matriz <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> de dimensión <span class="math notranslate nohighlight">\(n\times p\)</span>.</p>
 <p>Siempre (casi) se usa la matriz centrada y/o estandarizada, los paquetes suelen hacer este trabajo por nosostros. Supongamos que  <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> ha sido centrada, su matriz de varianza covarianza viene dada por  <span class="math notranslate nohighlight">\(\frac{1}{n}\mathbf{X'X}\)</span>.</p>
 <p>¿Cómo encontrar un espacio de dimensión más reducida que represente adeucadamente los datos?</p>
 <section id="notacion">
-<h3><span class="section-number">7.1.1. </span>Notación<a class="headerlink" href="#notacion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.1. </span>Notación<a class="headerlink" href="#notacion" title="Permalink to this heading">#</a></h3>
 <p>Se desea encontrar un subespacio de dimensión menor que <span class="math notranslate nohighlight">\(p\)</span> tal que al proyectar sobre él los puntos conserven su estructura con la menor distorsión posible.</p>
 <p>Consideremos primero un subespacio de dimensión uno (una recta) obtenida por un conjunto de <span class="math notranslate nohighlight">\(p=2\)</span> variables.</p>
 <p>La siguiente figura indica el diagrama de dispersión y una recta que, intuitivamente, proporciona un buen resumen de los datos, ya que las proyecciones de los puntos sobre ella indican aproximadamente la situación de los puntos en el plano.</p>
@@ -417,7 +418,7 @@ min\sum_{i = 1}^{n} r^2_i = \sum_{i = 1}^{n} |\mathbf{x_i}-z_i\mathbf{a_1}|^2
 <p><em>¿Cómo es eso posible?</em></p>
 </section>
 <section id="calculo-del-primer-componente">
-<h3><span class="section-number">7.1.2. </span>Cálculo del primer componente<a class="headerlink" href="#calculo-del-primer-componente" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.2. </span>Cálculo del primer componente<a class="headerlink" href="#calculo-del-primer-componente" title="Permalink to this heading">#</a></h3>
 <p>El primer componente principal será la combinación lineal de las variables originales que tenga varianza máxima. Los valores de este primer componente en los <span class="math notranslate nohighlight">\(n\)</span> individuos se representarán por un vector <span class="math notranslate nohighlight">\(\mathbf{z_1}\)</span>, dado por</p>
 <div class="math notranslate nohighlight">
 \[
@@ -769,7 +770,7 @@ M = \mathbf{a_1^{'}Sa_1}- \lambda(\mathbf{a_1^{'}a_1}-1)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fcf6a4a8910&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fd47e6b5160&gt;
 </pre></div>
 </div>
 <img alt="_images/24e4a93a119b672cbb3a7705416b1df884e869c7caf81cdf0c2186ccd31c77d0.png" src="_images/24e4a93a119b672cbb3a7705416b1df884e869c7caf81cdf0c2186ccd31c77d0.png" />
@@ -1238,10 +1239,11 @@ M = \mathbf{a_1^{'}Sa_1}- \lambda(\mathbf{a_1^{'}a_1}-1)
 </div>
 </div>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id2" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Teoría  obtenida de Peña, D. <em>Análisis de datos multivariantes</em> (2002). Referencias de <code class="docutils literal notranslate"><span class="pre">FactoMineR</span></code> vienen de Husson, F. <em>Exploratory multivariate analysis by example using R</em> (2017)</p>
-</aside>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Teoría  obtenida de Peña, D. <em>Análisis de datos multivariantes</em> (2002). Referencias de <code class="docutils literal notranslate"><span class="pre">FactoMineR</span></code> vienen de Husson, F. <em>Exploratory multivariate analysis by example using R</em> (2017)</p>
+</dd>
+</dl>
 </section>
 </section>
 </section>
@@ -1280,7 +1282,7 @@ M = \mathbf{a_1^{'}Sa_1}- \lambda(\mathbf{a_1^{'}a_1}-1)
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Modelos de Probabilidad</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Modelos de Probabilidad</p>
       </div>
     </a>
 </div>
@@ -1298,9 +1300,9 @@ M = \mathbf{a_1^{'}Sa_1}- \lambda(\mathbf{a_1^{'}a_1}-1)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento1">7.1. Planteamiento</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">7.1.1. Notación</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-primer-componente">7.1.2. Cálculo del primer componente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento1">8.1. Planteamiento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">8.1.1. Notación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-primer-componente">8.1.2. Cálculo del primer componente</a></li>
 </ul>
 </li>
 </ul>

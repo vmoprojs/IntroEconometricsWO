@@ -7,9 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Regresión lineal &#8212; Técnicas de Machine Learning con Python</title>
+    <title>6. Regresión lineal &#8212; Técnicas de Machine Learning con Python</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Regresion';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. Modelos de Probabilidad" href="ProbModels.html" />
-    <link rel="prev" title="4. Estadística Descriptiva &amp; Pruebas de hipótesis" href="Descriptiva.html" />
+    <link rel="next" title="7. Modelos de Probabilidad" href="ProbModels.html" />
+    <link rel="prev" title="5. Pruebas de hipótesis" href="PruebasHipotesis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,10 +166,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Descriptiva.html">4. Estadística Descriptiva &amp; Pruebas de hipótesis</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Regresión lineal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProbModels.html">6. Modelos de Probabilidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ACP.html">7. Análisis de Componentes Principales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Descriptiva.html">4. Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PruebasHipotesis.html">5. Pruebas de hipótesis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Regresión lineal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProbModels.html">7. Modelos de Probabilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ACP.html">8. Análisis de Componentes Principales</a></li>
 </ul>
 
     </div>
@@ -363,20 +364,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-paso-a-paso">5.1. Regresión: Paso a paso</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-paridad-del-poder-de-compra">5.1.1. Práctica: Paridad del poder de compra</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-sueno">5.1.2. Práctica: Sueño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-paso-a-paso">6.1. Regresión: Paso a paso</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-paridad-del-poder-de-compra">6.1.1. Práctica: Paridad del poder de compra</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-sueno">6.1.2. Práctica: Sueño</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">5.2. Transformaciones lineales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">5.2.1. Modelo reciproco</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">5.2.2. Modelo log-lineal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">5.2.3. Regresión a través del origen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">6.2. Transformaciones lineales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">6.2.1. Modelo reciproco</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">6.2.2. Modelo log-lineal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">6.2.3. Regresión a través del origen</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">5.3. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">5.3.1. Predicción</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">5.3.2. RLM: Educación con insumos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">6.3. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">6.3.1. Predicción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">6.3.2. RLM: Educación con insumos</a></li>
 </ul>
 </li>
 </ul>
@@ -391,7 +392,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="regresion-lineal">
-<h1><span class="section-number">5. </span>Regresión lineal<a class="headerlink" href="#regresion-lineal" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6. </span>Regresión lineal<a class="headerlink" href="#regresion-lineal" title="Permalink to this heading">#</a></h1>
 <p>Abordemos las primeras ideas de regresión lineal a través de un ejemplo práctico:</p>
 <ul class="simple">
 <li><p>Creamos dos variables, Ingreso y Consumo Esperado</p></li>
@@ -589,7 +590,7 @@ Dep. Variable:        consumo_muestra   R-squared:                       0.909
 Model:                            OLS   Adj. R-squared:                  0.904
 Method:                 Least Squares   F-statistic:                     179.4
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           8.44e-11
-Time:                        21:25:37   Log-Likelihood:                -76.677
+Time:                        23:36:05   Log-Likelihood:                -76.677
 No. Observations:                  20   AIC:                             157.4
 Df Residuals:                      18   BIC:                             159.3
 Df Model:                           1                                         
@@ -630,7 +631,7 @@ Notes:
 </div>
 </div>
 <section id="regresion-paso-a-paso">
-<h2><span class="section-number">5.1. </span>Regresión: Paso a paso<a class="headerlink" href="#regresion-paso-a-paso" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Regresión: Paso a paso<a class="headerlink" href="#regresion-paso-a-paso" title="Permalink to this heading">#</a></h2>
 <p>La función poblacional sería:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -786,7 +787,7 @@ Dep. Variable:                      Y   R-squared:                       0.962
 Model:                            OLS   Adj. R-squared:                  0.957
 Method:                 Least Squares   F-statistic:                     202.9
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           5.75e-07
-Time:                        21:25:38   Log-Likelihood:                -31.781
+Time:                        23:36:06   Log-Likelihood:                -31.781
 No. Observations:                  10   AIC:                             67.56
 Df Residuals:                       8   BIC:                             68.17
 Df Model:                           1                                         
@@ -1058,7 +1059,7 @@ Dep. Variable:                      Y   R-squared:                       0.962
 Model:                            OLS   Adj. R-squared:                  0.957
 Method:                 Least Squares   F-statistic:                     202.9
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           5.75e-07
-Time:                        21:25:38   Log-Likelihood:                -31.781
+Time:                        23:36:06   Log-Likelihood:                -31.781
 No. Observations:                  10   AIC:                             67.56
 Df Residuals:                       8   BIC:                             68.17
 Df Model:                           1                                         
@@ -1113,7 +1114,7 @@ Dep. Variable:                FOODEXP   R-squared:                       0.370
 Model:                            OLS   Adj. R-squared:                  0.358
 Method:                 Least Squares   F-statistic:                     31.10
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           8.45e-07
-Time:                        21:25:38   Log-Likelihood:                -308.16
+Time:                        23:36:06   Log-Likelihood:                -308.16
 No. Observations:                  55   AIC:                             620.3
 Df Residuals:                      53   BIC:                             624.3
 Df Model:                           1                                         
@@ -1178,7 +1179,7 @@ strong multicollinearity or other numerical problems.
 <li><p>Interprete la regresión anterior.</p></li>
 </ul>
 <section id="practica-paridad-del-poder-de-compra">
-<h3><span class="section-number">5.1.1. </span>Práctica: Paridad del poder de compra<a class="headerlink" href="#practica-paridad-del-poder-de-compra" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.1. </span>Práctica: Paridad del poder de compra<a class="headerlink" href="#practica-paridad-del-poder-de-compra" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/Tabla5_9.csv&quot;</span>
@@ -1367,7 +1368,7 @@ Dep. Variable:                   EXCH   R-squared:                       0.987
 Model:                            OLS   Adj. R-squared:                  0.986
 Method:                 Least Squares   F-statistic:                     2066.
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           8.80e-28
-Time:                        21:25:38   Log-Likelihood:                -205.44
+Time:                        23:36:07   Log-Likelihood:                -205.44
 No. Observations:                  30   AIC:                             414.9
 Df Residuals:                      28   BIC:                             417.7
 Df Model:                           1                                         
@@ -1400,7 +1401,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8dcdd93040&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe4aad9fc70&gt;]
 </pre></div>
 </div>
 <img alt="_images/25b6b306ca176d37fea07b9f06451de18dadf130aa573a74d999d2c372f27126.png" src="_images/25b6b306ca176d37fea07b9f06451de18dadf130aa573a74d999d2c372f27126.png" />
@@ -1420,7 +1421,7 @@ Dep. Variable:           np.log(EXCH)   R-squared:                       0.983
 Model:                            OLS   Adj. R-squared:                  0.983
 Method:                 Least Squares   F-statistic:                     1655.
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           1.87e-26
-Time:                        21:25:39   Log-Likelihood:                -7.4056
+Time:                        23:36:07   Log-Likelihood:                -7.4056
 No. Observations:                  30   AIC:                             18.81
 Df Residuals:                      28   BIC:                             21.61
 Df Model:                           1                                         
@@ -1446,7 +1447,7 @@ Notes:
 <p>La PPA sostiene que con una unidad de moneda debe ser posible comprar la misma canasta de bienes en todos los países.</p>
 </section>
 <section id="practica-sueno">
-<h3><span class="section-number">5.1.2. </span>Práctica: Sueño<a class="headerlink" href="#practica-sueno" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.2. </span>Práctica: Sueño<a class="headerlink" href="#practica-sueno" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/sleep75.csv&quot;</span>
@@ -1468,7 +1469,7 @@ Notes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f8dcdf20310&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fe4aaf24610&gt;
 </pre></div>
 </div>
 <img alt="_images/745deb790ca66928b0d0558afc6b0a0f74d45c910cef4c21f9819151b7305d6f.png" src="_images/745deb790ca66928b0d0558afc6b0a0f74d45c910cef4c21f9819151b7305d6f.png" />
@@ -1488,7 +1489,7 @@ Dep. Variable:                  sleep   R-squared:                       0.103
 Model:                            OLS   Adj. R-squared:                  0.102
 Method:                 Least Squares   F-statistic:                     81.09
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           1.99e-18
-Time:                        21:25:39   Log-Likelihood:                -5267.1
+Time:                        23:36:08   Log-Likelihood:                -5267.1
 No. Observations:                 706   AIC:                         1.054e+04
 Df Residuals:                     704   BIC:                         1.055e+04
 Df Model:                           1                                         
@@ -1559,7 +1560,7 @@ dtype: float64
 </section>
 </section>
 <section id="transformaciones-lineales">
-<h2><span class="section-number">5.2. </span>Transformaciones lineales<a class="headerlink" href="#transformaciones-lineales" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Transformaciones lineales<a class="headerlink" href="#transformaciones-lineales" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/Table%2031_3.csv&quot;</span>
@@ -1578,7 +1579,7 @@ Dep. Variable:              Cellphone   R-squared:                       0.626
 Model:                            OLS   Adj. R-squared:                  0.615
 Method:                 Least Squares   F-statistic:                     53.67
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           2.50e-08
-Time:                        21:25:40   Log-Likelihood:                -148.94
+Time:                        23:36:09   Log-Likelihood:                -148.94
 No. Observations:                  34   AIC:                             301.9
 Df Residuals:                      32   BIC:                             304.9
 Df Model:                           1                                         
@@ -1621,7 +1622,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <section id="modelo-reciproco">
-<h3><span class="section-number">5.2.1. </span>Modelo reciproco<a class="headerlink" href="#modelo-reciproco" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.1. </span>Modelo reciproco<a class="headerlink" href="#modelo-reciproco" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span>  <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/tabla_6_4.csv&quot;</span>
@@ -1746,7 +1747,7 @@ Dep. Variable:                     CM   R-squared:                       0.166
 Model:                            OLS   Adj. R-squared:                  0.153
 Method:                 Least Squares   F-statistic:                     12.36
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           0.000826
-Time:                        21:25:40   Log-Likelihood:                -361.64
+Time:                        23:36:09   Log-Likelihood:                -361.64
 No. Observations:                  64   AIC:                             727.3
 Df Residuals:                      62   BIC:                             731.6
 Df Model:                           1                                         
@@ -1787,7 +1788,7 @@ Dep. Variable:                     CM   R-squared:                       0.459
 Model:                            OLS   Adj. R-squared:                  0.450
 Method:                 Least Squares   F-statistic:                     52.61
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           7.82e-10
-Time:                        21:25:40   Log-Likelihood:                -347.79
+Time:                        23:36:09   Log-Likelihood:                -347.79
 No. Observations:                  64   AIC:                             699.6
 Df Residuals:                      62   BIC:                             703.9
 Df Model:                           1                                         
@@ -1812,7 +1813,7 @@ Notes:
 </div>
 </section>
 <section id="modelo-log-lineal">
-<h3><span class="section-number">5.2.2. </span>Modelo log-lineal<a class="headerlink" href="#modelo-log-lineal" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.2. </span>Modelo log-lineal<a class="headerlink" href="#modelo-log-lineal" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/ceosal2.csv&quot;</span>
@@ -1834,7 +1835,7 @@ Dep. Variable:                lsalary   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.008
 Method:                 Least Squares   F-statistic:                     2.334
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):              0.128
-Time:                        21:25:41   Log-Likelihood:                -160.84
+Time:                        23:36:10   Log-Likelihood:                -160.84
 No. Observations:                 177   AIC:                             325.7
 Df Residuals:                     175   BIC:                             332.0
 Df Model:                           1                                         
@@ -1859,7 +1860,7 @@ Notes:
 </div>
 </section>
 <section id="regresion-a-traves-del-origen">
-<h3><span class="section-number">5.2.3. </span>Regresión a través del origen<a class="headerlink" href="#regresion-a-traves-del-origen" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.3. </span>Regresión a través del origen<a class="headerlink" href="#regresion-a-traves-del-origen" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/Table%206_1.csv&quot;</span>
@@ -1879,7 +1880,7 @@ Dep. Variable:                      Y   R-squared (uncentered):                 
 Model:                            OLS   Adj. R-squared (uncentered):              0.500
 Method:                 Least Squares   F-statistic:                              241.2
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):                    4.41e-38
-Time:                        21:25:41   Log-Likelihood:                         -751.30
+Time:                        23:36:10   Log-Likelihood:                         -751.30
 No. Observations:                 240   AIC:                                      1505.
 Df Residuals:                     239   BIC:                                      1508.
 Df Model:                           1                                                  
@@ -1905,7 +1906,7 @@ Notes:
 </section>
 </section>
 <section id="regresion-lineal-multiple">
-<h2><span class="section-number">5.3. </span>Regresión Lineal Múltiple<a class="headerlink" href="#regresion-lineal-multiple" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Regresión Lineal Múltiple<a class="headerlink" href="#regresion-lineal-multiple" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span>  <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/hprice1.csv&quot;</span>
@@ -2074,7 +2075,7 @@ Dep. Variable:                 lprice   R-squared:                       0.773
 Model:                            OLS   Adj. R-squared:                  0.762
 Method:                 Least Squares   F-statistic:                     70.58
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           6.45e-26
-Time:                        21:25:41   Log-Likelihood:                 45.750
+Time:                        23:36:11   Log-Likelihood:                 45.750
 No. Observations:                  88   AIC:                            -81.50
 Df Residuals:                      83   BIC:                            -69.11
 Df Model:                           4                                         
@@ -2114,7 +2115,7 @@ Dep. Variable:                 lprice   R-squared:                       0.643
 Model:                            OLS   Adj. R-squared:                  0.630
 Method:                 Least Squares   F-statistic:                     50.42
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           9.74e-19
-Time:                        21:25:41   Log-Likelihood:                 25.861
+Time:                        23:36:11   Log-Likelihood:                 25.861
 No. Observations:                  88   AIC:                            -43.72
 Df Residuals:                      84   BIC:                            -33.81
 Df Model:                           3                                         
@@ -2153,7 +2154,7 @@ Dep. Variable:                 lprice   R-squared:                       0.215
 Model:                            OLS   Adj. R-squared:                  0.206
 Method:                 Least Squares   F-statistic:                     23.53
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           5.43e-06
-Time:                        21:25:41   Log-Likelihood:                -8.8147
+Time:                        23:36:11   Log-Likelihood:                -8.8147
 No. Observations:                  88   AIC:                             21.63
 Df Residuals:                      86   BIC:                             26.58
 Df Model:                           1                                         
@@ -2185,14 +2186,14 @@ Notes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f8dcd89e220&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fe4a9f46b20&gt;
 </pre></div>
 </div>
 <img alt="_images/bd7fc130ebfac2a4f827b3958090bfcffd9ca9fa7faeb16de462473f305a82c4.png" src="_images/bd7fc130ebfac2a4f827b3958090bfcffd9ca9fa7faeb16de462473f305a82c4.png" />
 </div>
 </div>
 <section id="prediccion">
-<h3><span class="section-number">5.3.1. </span>Predicción<a class="headerlink" href="#prediccion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Predicción<a class="headerlink" href="#prediccion" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_nuevos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;llotsize&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2100</span><span class="p">),</span><span class="s1">&#39;lsqrft&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">8000</span><span class="p">),</span><span class="s1">&#39;bdrms&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -2329,7 +2330,7 @@ Notes:
 </div>
 </section>
 <section id="rlm-educacion-con-insumos">
-<h3><span class="section-number">5.3.2. </span>RLM: Educación con insumos<a class="headerlink" href="#rlm-educacion-con-insumos" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.2. </span>RLM: Educación con insumos<a class="headerlink" href="#rlm-educacion-con-insumos" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/gpa1.csv&quot;</span>
@@ -2348,7 +2349,7 @@ Dep. Variable:                 colGPA   R-squared:                       0.050
 Model:                            OLS   Adj. R-squared:                  0.043
 Method:                 Least Squares   F-statistic:                     7.314
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):            0.00770
-Time:                        21:25:45   Log-Likelihood:                -56.641
+Time:                        23:36:15   Log-Likelihood:                -56.641
 No. Observations:                 141   AIC:                             117.3
 Df Residuals:                     139   BIC:                             123.2
 Df Model:                           1                                         
@@ -2385,7 +2386,7 @@ Dep. Variable:                 colGPA   R-squared:                       0.219
 Model:                            OLS   Adj. R-squared:                  0.202
 Method:                 Least Squares   F-statistic:                     12.83
 Date:                Wed, 29 Nov 2023   Prob (F-statistic):           1.93e-07
-Time:                        21:25:45   Log-Likelihood:                -42.796
+Time:                        23:36:15   Log-Likelihood:                -42.796
 No. Observations:                 141   AIC:                             93.59
 Df Residuals:                     137   BIC:                             105.4
 Df Model:                           3                                         
@@ -2443,12 +2444,12 @@ Notes:
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Descriptiva.html"
+       href="PruebasHipotesis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Estadística Descriptiva &amp; Pruebas de hipótesis</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Pruebas de hipótesis</p>
       </div>
     </a>
     <a class="right-next"
@@ -2456,7 +2457,7 @@ Notes:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Modelos de Probabilidad</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Modelos de Probabilidad</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2475,20 +2476,20 @@ Notes:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-paso-a-paso">5.1. Regresión: Paso a paso</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-paridad-del-poder-de-compra">5.1.1. Práctica: Paridad del poder de compra</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-sueno">5.1.2. Práctica: Sueño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-paso-a-paso">6.1. Regresión: Paso a paso</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-paridad-del-poder-de-compra">6.1.1. Práctica: Paridad del poder de compra</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-sueno">6.1.2. Práctica: Sueño</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">5.2. Transformaciones lineales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">5.2.1. Modelo reciproco</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">5.2.2. Modelo log-lineal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">5.2.3. Regresión a través del origen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">6.2. Transformaciones lineales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">6.2.1. Modelo reciproco</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">6.2.2. Modelo log-lineal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">6.2.3. Regresión a través del origen</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">5.3. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">5.3.1. Predicción</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">5.3.2. RLM: Educación con insumos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">6.3. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">6.3.1. Predicción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">6.3.2. RLM: Educación con insumos</a></li>
 </ul>
 </li>
 </ul>

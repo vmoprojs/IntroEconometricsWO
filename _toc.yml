@@ -14,6 +14,7 @@ parts:
   numbered: true
   chapters:
   - file: Descriptiva
+  - file: PruebasHipotesis
   - file: Regresion
   - file: ProbModels
   - file: ACP

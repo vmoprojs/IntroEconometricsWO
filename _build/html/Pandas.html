@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>2. Pandas &#8212; Técnicas de Machine Learning con Python</title>
   
@@ -164,10 +164,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Descriptiva.html">4. Estadística Descriptiva &amp; Pruebas de hipótesis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Regresion.html">5. Regresión lineal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProbModels.html">6. Modelos de Probabilidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ACP.html">7. Análisis de Componentes Principales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Descriptiva.html">4. Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PruebasHipotesis.html">5. Pruebas de hipótesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regresion.html">6. Regresión lineal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProbModels.html">7. Modelos de Probabilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ACP.html">8. Análisis de Componentes Principales</a></li>
 </ul>
 
     </div>
@@ -2239,7 +2240,7 @@ Categories (11, object): [&#39;D&#39; &lt; &#39;D+&#39; &lt; &#39;C-&#39; &lt; &
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import os as os</span>
 <span class="c1">#os.chdir(&quot;C:/Users/VICTOR/Documents/AnalyticsPython/Data&quot;)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/census.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/census.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SUMLEV&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">50</span><span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;STNAME&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="s1">&#39;CENSUS2010POP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;average&#39;</span><span class="p">:</span> <span class="s1">&#39;avg&#39;</span><span class="p">})</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;avg&#39;</span><span class="p">],</span><span class="mi">10</span><span class="p">)</span>
@@ -2247,14 +2248,78 @@ Categories (11, object): [&#39;D&#39; &lt; &#39;D+&#39; &lt; &#39;C-&#39; &lt; &
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STNAME
+Alabama                   (11706.087, 75333.413]
+Alaska                    (11706.087, 75333.413]
+Arizona                 (390320.176, 453317.529]
+Arkansas                  (11706.087, 75333.413]
+California              (579312.234, 642309.586]
+Colorado                 (75333.413, 138330.766]
+Connecticut             (390320.176, 453317.529]
+Delaware                (264325.471, 327322.823]
+District of Columbia    (579312.234, 642309.586]
+Florida                 (264325.471, 327322.823]
+Georgia                   (11706.087, 75333.413]
+Hawaii                  (264325.471, 327322.823]
+Idaho                     (11706.087, 75333.413]
+Illinois                 (75333.413, 138330.766]
+Indiana                   (11706.087, 75333.413]
+Iowa                      (11706.087, 75333.413]
+Kansas                    (11706.087, 75333.413]
+Kentucky                  (11706.087, 75333.413]
+Louisiana                 (11706.087, 75333.413]
+Maine                    (75333.413, 138330.766]
+Maryland                (201328.118, 264325.471]
+Massachusetts           (453317.529, 516314.881]
+Michigan                 (75333.413, 138330.766]
+Minnesota                 (11706.087, 75333.413]
+Mississippi               (11706.087, 75333.413]
+Missouri                  (11706.087, 75333.413]
+Montana                   (11706.087, 75333.413]
+Nebraska                  (11706.087, 75333.413]
+Nevada                  (138330.766, 201328.118]
+New Hampshire            (75333.413, 138330.766]
+New Jersey              (390320.176, 453317.529]
+New Mexico                (11706.087, 75333.413]
+New York                (264325.471, 327322.823]
+North Carolina           (75333.413, 138330.766]
+North Dakota              (11706.087, 75333.413]
+Ohio                     (75333.413, 138330.766]
+Oklahoma                  (11706.087, 75333.413]
+Oregon                   (75333.413, 138330.766]
+Pennsylvania            (138330.766, 201328.118]
+Rhode Island            (201328.118, 264325.471]
+South Carolina           (75333.413, 138330.766]
+South Dakota              (11706.087, 75333.413]
+Tennessee                 (11706.087, 75333.413]
+Texas                    (75333.413, 138330.766]
+Utah                     (75333.413, 138330.766]
+Vermont                   (11706.087, 75333.413]
+Virginia                  (11706.087, 75333.413]
+Washington              (138330.766, 201328.118]
+West Virginia             (11706.087, 75333.413]
+Wisconsin                (75333.413, 138330.766]
+Wyoming                   (11706.087, 75333.413]
+Name: avg, dtype: category
+Categories (10, interval[float64, right]): [(11706.087, 75333.413] &lt; (75333.413, 138330.766] &lt; (138330.766, 201328.118] &lt; (201328.118, 264325.471] ... (390320.176, 453317.529] &lt; (453317.529, 516314.881] &lt; (516314.881, 579312.234] &lt; (579312.234, 642309.586]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tablas-dinamicas">
+<h3><span class="section-number">2.3.5. </span>Tablas dinámicas<a class="headerlink" href="#tablas-dinamicas" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/cars.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">56</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#import os as os</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">#os.chdir(&quot;C:/Users/VICTOR/Documents/AnalyticsPython/Data&quot;)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/census.csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SUMLEV&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">50</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;STNAME&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="s1">&#39;CENSUS2010POP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;average&#39;</span><span class="p">:</span> <span class="s1">&#39;avg&#39;</span><span class="p">})</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">57</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/cars.csv&#39;</span><span class="p">)</span>
 
 <span class="nn">File ~/opt/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
@@ -2325,17 +2390,7 @@ Categories (11, object): [&#39;D&#39; &lt; &#39;D+&#39; &lt; &#39;C-&#39; &lt; &
 <span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
 <span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Data/census.csv&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="tablas-dinamicas">
-<h3><span class="section-number">2.3.5. </span>Tablas dinámicas<a class="headerlink" href="#tablas-dinamicas" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/cars.csv&#39;</span><span class="p">)</span>
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Data/cars.csv&#39;
 </pre></div>
 </div>
 </div>
