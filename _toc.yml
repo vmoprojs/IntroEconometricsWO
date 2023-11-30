@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Parte 1
+  numbered: true
+  chapters:
+  - file: IntroduccionPython
+  - file: Pandas
+  - file: Visualizacion
+- caption: Parte 2
+  numbered: true
+  chapters:
+  - file: Descriptiva
+  - file: Regresion
+  - file: ProbModels
+  - file: ACP
