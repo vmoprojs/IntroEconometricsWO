@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Técnicas de Machine Learning con Python
+title: Econometría con Python
 author: Víctor Morales Oñate
 logo: logo.jpg
 
@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/vmoprojs/MLPython  # Online location of your book
+  url: https://github.com/vmoprojs/IntroEconometricsWO  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
