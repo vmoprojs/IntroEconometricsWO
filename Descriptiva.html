@@ -433,31 +433,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="estadistica">
 <h1><span class="section-number">4. </span>Estadística<a class="headerlink" href="#estadistica" title="Permalink to this heading">#</a></h1>
 <p><strong>¿Qué relación tienen Charles Darwin, Francis Galton y Karl Pearson?</strong></p>
-<table><tr>
-<td> 
-  <p align="center" style="padding: 10px">
-    <img alt="Forwarding" src="images/Darwin.jpeg" width="300">
-    <br>
-    <em style="color: grey">Darwin</em>
-  </p> 
-</td>
-<td> 
-  <p align="center">
-    <img alt="Routing" src="images/galton.jpg" width="300">
-    <br>
-    <em style="color: grey">Galton</em>
-  </p> 
-</td>
-<td> 
-  <p align="center">
-    <img alt="Routing" src="images/Karl_Pearson.jpg" width="300">
-    <br>
-    <em style="color: grey">Pearson</em>
-  </p> 
-</td>
-</tr></table>
+<a class="reference internal image-reference" href="_images/stfig.png"><img alt="_images/stfig.png" src="_images/stfig.png" style="width: 600px; height: 300px;" /></a>
 <p>Charles Darwin (1809-1882), Fracis Galton (1822-1911), Karl Pearson (1857-1936)</p>
-</div>
 <ul class="simple">
 <li><p>Galton nace en Birmingham (Inglaterra). Viaja por el mundo realizando estudios en geografía y en 1850 se le otorga la medalla de oro de la <em>Royal Geographical Society</em>.</p></li>
 <li><p>Influenciado por su primo, Charles Darwin, dedica la segunda parte de su vida a probar la teoría de la evolución</p></li>
@@ -680,9 +657,21 @@ T_k = \left(\sqrt[k]{\frac{X_{t+k}}{X_t}-1}\right)100
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="mi">57</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([62.29215704, 58.20047163, 59.93621395, 63.7226796 , 62.60267397])
 </pre></div>
 </div>
 </div>
@@ -694,7 +683,7 @@ T_k = \left(\sqrt[k]{\frac{X_{t+k}}{X_t}-1}\right)100
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57.17942404660345
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.350839236675235
 </pre></div>
 </div>
 </div>
@@ -757,7 +746,7 @@ Med = 10400+\frac{100/2-23}{35}(2400) = 12251
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57.28228835831399
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.292157037902996
 </pre></div>
 </div>
 </div>
@@ -823,7 +812,7 @@ Mo = 10400+\frac{35-20}{(35-20)+(35-25)}2400=11840
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57.099253282727005
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.317892357435866
 </pre></div>
 </div>
 </div>
@@ -852,7 +841,19 @@ Mo = 10400+\frac{35-20}{(35-20)+(35-25)}2400=11840
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([55.03410543, 57.28228836, 59.23998451])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([59.41549125, 62.29215704, 62.93867566])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1. ])
 </pre></div>
 </div>
 </div>
@@ -864,9 +865,9 @@ Mo = 10400+\frac{35-20}{(35-20)+(35-25)}2400=11840
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([49.34103055, 53.26425554, 54.40965441, 55.73393544, 56.41040836,
-       57.28228836, 57.97134944, 58.36223852, 59.89487029, 61.44095087,
-       63.80926387])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([58.20047163, 58.20047163, 58.96419825, 59.86678426, 61.06706663,
+       62.29215704, 62.45362584, 62.6474742 , 63.22987712, 63.7226796 ,
+       63.7226796 ])
 </pre></div>
 </div>
 </div>
@@ -878,7 +879,7 @@ Mo = 10400+\frac{35-20}{(35-20)+(35-25)}2400=11840
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DescribeResult(nobs=100, minmax=(49.34103055249776, 63.80926387196283), mean=57.17942404660345, variance=9.23478744740847, skewness=0.005171839713554377, kurtosis=-0.37835455663313455)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DescribeResult(nobs=5, minmax=(58.20047162510167, 63.722679597604376), mean=61.350839236675235, variance=5.001194221130538, skewness=-0.44880941714654277, kurtosis=-1.2833798786374198)
 </pre></div>
 </div>
 </div>
@@ -912,7 +913,7 @@ s  = \sqrt{\frac{1}{n-1}\sum_{i = 1}^{n}(x_i-\bar{x})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.142439572934386
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.000955376904431
 </pre></div>
 </div>
 </div>
@@ -924,7 +925,7 @@ s  = \sqrt{\frac{1}{n-1}\sum_{i = 1}^{n}(x_i-\bar{x})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0236467341497395
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0002388299661695
 </pre></div>
 </div>
 </div>
@@ -950,7 +951,7 @@ s  = \sqrt{\frac{1}{n-1}\sum_{i = 1}^{n}(x_i-\bar{x})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57.17942404660345
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.350839236675235
 </pre></div>
 </div>
 </div>
@@ -962,7 +963,7 @@ s  = \sqrt{\frac{1}{n-1}\sum_{i = 1}^{n}(x_i-\bar{x})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0236467341497395
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0002388299661695
 </pre></div>
 </div>
 </div>
@@ -974,7 +975,7 @@ s  = \sqrt{\frac{1}{n-1}\sum_{i = 1}^{n}(x_i-\bar{x})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.142439572934386
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.000955376904431
 </pre></div>
 </div>
 </div>
@@ -997,7 +998,7 @@ s  = \sqrt{\frac{1}{n-1}\sum_{i = 1}^{n}(x_i-\bar{x})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.468233319465064
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.522207972502706
 </pre></div>
 </div>
 </div>
@@ -1165,7 +1166,7 @@ f(x) = \left\{\begin{array}{ll}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fbe741b5c70&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fc60f9b6c70&gt;]
 </pre></div>
 </div>
 <img alt="_images/5049422207346a7a4a05588f3bcd55a3eb9afcd0b52b47e3775fdc8a22b81091.png" src="_images/5049422207346a7a4a05588f3bcd55a3eb9afcd0b52b47e3775fdc8a22b81091.png" />
