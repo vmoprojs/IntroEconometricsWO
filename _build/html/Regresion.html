@@ -368,18 +368,27 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incorporando-no-linealidades-en-la-regresion-simple">6.1.1. Incorporando no linealidades en la regresión simple</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-paridad-del-poder-de-compra">6.1.2. Práctica: Paridad del poder de compra</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-sueno">6.1.3. Práctica: Sueño</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">6.1.4. Transformaciones lineales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">6.1.5. Modelo reciproco</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">6.1.6. Modelo log-lineal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">6.1.7. Regresión a través del origen</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">6.2. Transformaciones lineales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">6.2.1. Modelo reciproco</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">6.2.2. Modelo log-lineal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">6.2.3. Regresión a través del origen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heterocedasticidad">6.2.4. Heterocedasticidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">6.2. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">6.2.1. Predicción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-cobb-douglas">6.2.2. RLM: Cobb-Douglas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-dicotomicas">6.2.3. RLM: Dicotómicas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">6.2.4. RLM: Educación con insumos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-cambio-estructural">6.2.5. RLM: Cambio estructural</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">6.3. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">6.3.1. Predicción</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">6.3.2. RLM: Educación con insumos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-supuestos">6.3. RLM: Supuestos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multicolinealidad">6.3.1. Multicolinealidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heterocedasticidad">6.3.2. Heterocedasticidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#como-detectarla">6.3.2.1. ¿Cómo detectarla?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prueba-de-breusch-pagan">6.3.2.2. Prueba de Breusch Pagan</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -591,8 +600,8 @@ document.write(`
 Dep. Variable:        consumo_muestra   R-squared:                       0.909
 Model:                            OLS   Adj. R-squared:                  0.904
 Method:                 Least Squares   F-statistic:                     179.4
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           8.44e-11
-Time:                        12:05:05   Log-Likelihood:                -76.677
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           8.44e-11
+Time:                        01:15:15   Log-Likelihood:                -76.677
 No. Observations:                  20   AIC:                             157.4
 Df Residuals:                      18   BIC:                             159.3
 Df Model:                           1                                         
@@ -788,8 +797,8 @@ S_{xy} = \sum_{i=1}^{n}x_i y_i-n\bar{x}\bar{y}
 Dep. Variable:                      Y   R-squared:                       0.962
 Model:                            OLS   Adj. R-squared:                  0.957
 Method:                 Least Squares   F-statistic:                     202.9
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           5.75e-07
-Time:                        12:05:05   Log-Likelihood:                -31.781
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           5.75e-07
+Time:                        01:15:15   Log-Likelihood:                -31.781
 No. Observations:                  10   AIC:                             67.56
 Df Residuals:                       8   BIC:                             68.17
 Df Model:                           1                                         
@@ -1060,8 +1069,8 @@ Notes:
 Dep. Variable:                      Y   R-squared:                       0.962
 Model:                            OLS   Adj. R-squared:                  0.957
 Method:                 Least Squares   F-statistic:                     202.9
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           5.75e-07
-Time:                        12:05:06   Log-Likelihood:                -31.781
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           5.75e-07
+Time:                        01:15:15   Log-Likelihood:                -31.781
 No. Observations:                  10   AIC:                             67.56
 Df Residuals:                       8   BIC:                             68.17
 Df Model:                           1                                         
@@ -1118,8 +1127,8 @@ salary = \beta_0+\beta_1roe+u
 Dep. Variable:                 salary   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.008
 Method:                 Least Squares   F-statistic:                     2.767
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):             0.0978
-Time:                        12:05:06   Log-Likelihood:                -1804.5
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):             0.0978
+Time:                        01:15:16   Log-Likelihood:                -1804.5
 No. Observations:                 209   AIC:                             3613.
 Df Residuals:                     207   BIC:                             3620.
 Df Model:                           1                                         
@@ -1184,8 +1193,8 @@ wage = \beta_0+\beta_1 educ+u
 Dep. Variable:                   wage   R-squared:                       0.164
 Model:                            OLS   Adj. R-squared:                  0.163
 Method:                 Least Squares   F-statistic:                     102.9
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           3.44e-22
-Time:                        12:05:06   Log-Likelihood:                -1383.4
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           3.44e-22
+Time:                        01:15:16   Log-Likelihood:                -1383.4
 No. Observations:                 525   AIC:                             2771.
 Df Residuals:                     523   BIC:                             2779.
 Df Model:                           1                                         
@@ -1208,6 +1217,7 @@ Notes:
 </div>
 </div>
 </div>
+<p>En promedio, un año más de educación genera un aumento de 0.5406 dólares más en el salsario por ahora.</p>
 <p><strong>[Ejemplo 2.5] Resultados de la votación y gastos de campaña</strong></p>
 <p><span class="math notranslate nohighlight">\(y\)</span>: <span class="math notranslate nohighlight">\(voteA\)</span>, es el porcentaje de voto recibido por el candidato A.</p>
 <p><span class="math notranslate nohighlight">\(x\)</span>: <span class="math notranslate nohighlight">\(shareA\)</span> es el porcentaje del total de campaña gastado por el candidato A.</p>
@@ -1238,8 +1248,8 @@ voteA = \beta_0+\beta_1 shareA
 Dep. Variable:                  voteA   R-squared:                       0.856
 Model:                            OLS   Adj. R-squared:                  0.855
 Method:                 Least Squares   F-statistic:                     1018.
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           6.63e-74
-Time:                        12:05:07   Log-Likelihood:                -565.20
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           6.63e-74
+Time:                        01:15:17   Log-Likelihood:                -565.20
 No. Observations:                 173   AIC:                             1134.
 Df Residuals:                     171   BIC:                             1141.
 Df Model:                           1                                         
@@ -1298,8 +1308,8 @@ log(wage) = \beta_0+\beta_1educ
 Dep. Variable:                  lwage   R-squared:                       0.185
 Model:                            OLS   Adj. R-squared:                  0.184
 Method:                 Least Squares   F-statistic:                     119.0
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           4.19e-25
-Time:                        12:05:07   Log-Likelihood:                -358.91
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           4.19e-25
+Time:                        01:15:17   Log-Likelihood:                -358.91
 No. Observations:                 525   AIC:                             721.8
 Df Residuals:                     523   BIC:                             730.3
 Df Model:                           1                                         
@@ -1351,8 +1361,8 @@ log(salary)=\beta_0+\beta_1log(sales)
 Dep. Variable:                lsalary   R-squared:                       0.211
 Model:                            OLS   Adj. R-squared:                  0.207
 Method:                 Least Squares   F-statistic:                     55.30
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           2.70e-12
-Time:                        12:05:07   Log-Likelihood:                -152.50
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           2.70e-12
+Time:                        01:15:17   Log-Likelihood:                -152.50
 No. Observations:                 209   AIC:                             309.0
 Df Residuals:                     207   BIC:                             315.7
 Df Model:                           1                                         
@@ -1403,8 +1413,8 @@ H_1:\beta_2\neq 0
 Dep. Variable:                FOODEXP   R-squared:                       0.370
 Model:                            OLS   Adj. R-squared:                  0.358
 Method:                 Least Squares   F-statistic:                     31.10
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           8.45e-07
-Time:                        12:05:08   Log-Likelihood:                -308.16
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           8.45e-07
+Time:                        01:15:18   Log-Likelihood:                -308.16
 No. Observations:                  55   AIC:                             620.3
 Df Residuals:                      53   BIC:                             624.3
 Df Model:                           1                                         
@@ -1658,8 +1668,8 @@ strong multicollinearity or other numerical problems.
 Dep. Variable:                   EXCH   R-squared:                       0.987
 Model:                            OLS   Adj. R-squared:                  0.986
 Method:                 Least Squares   F-statistic:                     2066.
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           8.80e-28
-Time:                        12:05:09   Log-Likelihood:                -205.44
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           8.80e-28
+Time:                        01:15:18   Log-Likelihood:                -205.44
 No. Observations:                  30   AIC:                             414.9
 Df Residuals:                      28   BIC:                             417.7
 Df Model:                           1                                         
@@ -1692,7 +1702,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb67652ac70&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd9ffc1dd30&gt;]
 </pre></div>
 </div>
 <img alt="_images/25b6b306ca176d37fea07b9f06451de18dadf130aa573a74d999d2c372f27126.png" src="_images/25b6b306ca176d37fea07b9f06451de18dadf130aa573a74d999d2c372f27126.png" />
@@ -1711,8 +1721,8 @@ strong multicollinearity or other numerical problems.
 Dep. Variable:           np.log(EXCH)   R-squared:                       0.983
 Model:                            OLS   Adj. R-squared:                  0.983
 Method:                 Least Squares   F-statistic:                     1655.
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           1.87e-26
-Time:                        12:05:09   Log-Likelihood:                -7.4056
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.87e-26
+Time:                        01:15:18   Log-Likelihood:                -7.4056
 No. Observations:                  30   AIC:                             18.81
 Df Residuals:                      28   BIC:                             21.61
 Df Model:                           1                                         
@@ -1760,7 +1770,7 @@ Notes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fb6766aedf0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fd9f9e08cd0&gt;
 </pre></div>
 </div>
 <img alt="_images/745deb790ca66928b0d0558afc6b0a0f74d45c910cef4c21f9819151b7305d6f.png" src="_images/745deb790ca66928b0d0558afc6b0a0f74d45c910cef4c21f9819151b7305d6f.png" />
@@ -1779,8 +1789,8 @@ Notes:
 Dep. Variable:                  sleep   R-squared:                       0.103
 Model:                            OLS   Adj. R-squared:                  0.102
 Method:                 Least Squares   F-statistic:                     81.09
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           1.99e-18
-Time:                        12:05:10   Log-Likelihood:                -5267.1
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.99e-18
+Time:                        01:15:19   Log-Likelihood:                -5267.1
 No. Observations:                 706   AIC:                         1.054e+04
 Df Residuals:                     704   BIC:                         1.055e+04
 Df Model:                           1                                         
@@ -1849,9 +1859,8 @@ dtype: float64
 </div>
 </div>
 </section>
-</section>
 <section id="transformaciones-lineales">
-<h2><span class="section-number">6.2. </span>Transformaciones lineales<a class="headerlink" href="#transformaciones-lineales" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">6.1.4. </span>Transformaciones lineales<a class="headerlink" href="#transformaciones-lineales" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/Table%2031_3.csv&quot;</span>
@@ -1869,8 +1878,8 @@ dtype: float64
 Dep. Variable:              Cellphone   R-squared:                       0.626
 Model:                            OLS   Adj. R-squared:                  0.615
 Method:                 Least Squares   F-statistic:                     53.67
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           2.50e-08
-Time:                        12:05:10   Log-Likelihood:                -148.94
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           2.50e-08
+Time:                        01:15:20   Log-Likelihood:                -148.94
 No. Observations:                  34   AIC:                             301.9
 Df Residuals:                      32   BIC:                             304.9
 Df Model:                           1                                         
@@ -1912,8 +1921,9 @@ strong multicollinearity or other numerical problems.
 <img alt="_images/9e218f4b91fac7f7941f21f8f0e794ef3fbeb3ded6737cf6d1f50154dfba4d3d.png" src="_images/9e218f4b91fac7f7941f21f8f0e794ef3fbeb3ded6737cf6d1f50154dfba4d3d.png" />
 </div>
 </div>
+</section>
 <section id="modelo-reciproco">
-<h3><span class="section-number">6.2.1. </span>Modelo reciproco<a class="headerlink" href="#modelo-reciproco" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.5. </span>Modelo reciproco<a class="headerlink" href="#modelo-reciproco" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span>  <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/tabla_6_4.csv&quot;</span>
@@ -2037,8 +2047,8 @@ strong multicollinearity or other numerical problems.
 Dep. Variable:                     CM   R-squared:                       0.166
 Model:                            OLS   Adj. R-squared:                  0.153
 Method:                 Least Squares   F-statistic:                     12.36
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           0.000826
-Time:                        12:05:11   Log-Likelihood:                -361.64
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           0.000826
+Time:                        01:15:20   Log-Likelihood:                -361.64
 No. Observations:                  64   AIC:                             727.3
 Df Residuals:                      62   BIC:                             731.6
 Df Model:                           1                                         
@@ -2078,8 +2088,8 @@ strong multicollinearity or other numerical problems.
 Dep. Variable:                     CM   R-squared:                       0.459
 Model:                            OLS   Adj. R-squared:                  0.450
 Method:                 Least Squares   F-statistic:                     52.61
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           7.82e-10
-Time:                        12:05:11   Log-Likelihood:                -347.79
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           7.82e-10
+Time:                        01:15:20   Log-Likelihood:                -347.79
 No. Observations:                  64   AIC:                             699.6
 Df Residuals:                      62   BIC:                             703.9
 Df Model:                           1                                         
@@ -2104,7 +2114,7 @@ Notes:
 </div>
 </section>
 <section id="modelo-log-lineal">
-<h3><span class="section-number">6.2.2. </span>Modelo log-lineal<a class="headerlink" href="#modelo-log-lineal" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.6. </span>Modelo log-lineal<a class="headerlink" href="#modelo-log-lineal" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/ceosal2.csv&quot;</span>
@@ -2125,8 +2135,8 @@ Notes:
 Dep. Variable:                lsalary   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.008
 Method:                 Least Squares   F-statistic:                     2.334
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):              0.128
-Time:                        12:05:12   Log-Likelihood:                -160.84
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):              0.128
+Time:                        01:15:21   Log-Likelihood:                -160.84
 No. Observations:                 177   AIC:                             325.7
 Df Residuals:                     175   BIC:                             332.0
 Df Model:                           1                                         
@@ -2151,7 +2161,7 @@ Notes:
 </div>
 </section>
 <section id="regresion-a-traves-del-origen">
-<h3><span class="section-number">6.2.3. </span>Regresión a través del origen<a class="headerlink" href="#regresion-a-traves-del-origen" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.7. </span>Regresión a través del origen<a class="headerlink" href="#regresion-a-traves-del-origen" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/Table%206_1.csv&quot;</span>
@@ -2170,8 +2180,8 @@ Notes:
 Dep. Variable:                      Y   R-squared (uncentered):                   0.502
 Model:                            OLS   Adj. R-squared (uncentered):              0.500
 Method:                 Least Squares   F-statistic:                              241.2
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):                    4.41e-38
-Time:                        12:05:12   Log-Likelihood:                         -751.30
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):                    4.41e-38
+Time:                        01:15:21   Log-Likelihood:                         -751.30
 No. Observations:                 240   AIC:                                      1505.
 Df Residuals:                     239   BIC:                                      1508.
 Df Model:                           1                                                  
@@ -2195,33 +2205,9 @@ Notes:
 </div>
 </div>
 </section>
-<section id="heterocedasticidad">
-<h3><span class="section-number">6.2.4. </span>Heterocedasticidad<a class="headerlink" href="#heterocedasticidad" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.stats.api</span> <span class="k">as</span> <span class="nn">sms</span>
-<span class="kn">from</span> <span class="nn">statsmodels.compat</span> <span class="kn">import</span> <span class="n">lzip</span>
-<span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lagrange multiplier statistic&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;f-value&#39;</span><span class="p">,</span> <span class="s1">&#39;f p-value&#39;</span><span class="p">]</span>
-
-<span class="n">resultado</span> <span class="o">=</span> <span class="n">sms</span><span class="o">.</span><span class="n">het_breuschpagan</span><span class="p">(</span><span class="n">lmod1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="n">lmod1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog</span><span class="p">)</span>
-<span class="n">lzip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Lagrange multiplier statistic&#39;, 12.20532818509179),
- (&#39;p-value&#39;, nan),
- (&#39;f-value&#39;, 12.805714080121996),
- (&#39;f p-value&#39;, 0.000418333816791458)]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="regresion-lineal-multiple">
-<h2><span class="section-number">6.3. </span>Regresión Lineal Múltiple<a class="headerlink" href="#regresion-lineal-multiple" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Regresión Lineal Múltiple<a class="headerlink" href="#regresion-lineal-multiple" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span>  <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/hprice1.csv&quot;</span>
@@ -2389,8 +2375,8 @@ Notes:
 Dep. Variable:                 lprice   R-squared:                       0.773
 Model:                            OLS   Adj. R-squared:                  0.762
 Method:                 Least Squares   F-statistic:                     70.58
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           6.45e-26
-Time:                        12:05:12   Log-Likelihood:                 45.750
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           6.45e-26
+Time:                        01:15:22   Log-Likelihood:                 45.750
 No. Observations:                  88   AIC:                            -81.50
 Df Residuals:                      83   BIC:                            -69.11
 Df Model:                           4                                         
@@ -2429,8 +2415,8 @@ Notes:
 Dep. Variable:                 lprice   R-squared:                       0.643
 Model:                            OLS   Adj. R-squared:                  0.630
 Method:                 Least Squares   F-statistic:                     50.42
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           9.74e-19
-Time:                        12:05:13   Log-Likelihood:                 25.861
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           9.74e-19
+Time:                        01:15:22   Log-Likelihood:                 25.861
 No. Observations:                  88   AIC:                            -43.72
 Df Residuals:                      84   BIC:                            -33.81
 Df Model:                           3                                         
@@ -2468,8 +2454,8 @@ Notes:
 Dep. Variable:                 lprice   R-squared:                       0.215
 Model:                            OLS   Adj. R-squared:                  0.206
 Method:                 Least Squares   F-statistic:                     23.53
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           5.43e-06
-Time:                        12:05:13   Log-Likelihood:                -8.8147
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           5.43e-06
+Time:                        01:15:22   Log-Likelihood:                -8.8147
 No. Observations:                  88   AIC:                             21.63
 Df Residuals:                      86   BIC:                             26.58
 Df Model:                           1                                         
@@ -2501,14 +2487,14 @@ Notes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fb676c50b50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fda0004dbb0&gt;
 </pre></div>
 </div>
 <img alt="_images/bd7fc130ebfac2a4f827b3958090bfcffd9ca9fa7faeb16de462473f305a82c4.png" src="_images/bd7fc130ebfac2a4f827b3958090bfcffd9ca9fa7faeb16de462473f305a82c4.png" />
 </div>
 </div>
 <section id="prediccion">
-<h3><span class="section-number">6.3.1. </span>Predicción<a class="headerlink" href="#prediccion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.1. </span>Predicción<a class="headerlink" href="#prediccion" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_nuevos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;llotsize&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2100</span><span class="p">),</span><span class="s1">&#39;lsqrft&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">8000</span><span class="p">),</span><span class="s1">&#39;bdrms&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -2643,30 +2629,500 @@ Notes:
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="rlm-cobb-douglas">
+<h3><span class="section-number">6.2.2. </span>RLM: Cobb-Douglas<a class="headerlink" href="#rlm-cobb-douglas" title="Permalink to this heading">#</a></h3>
+<p>El modelo:</p>
+<div class="math notranslate nohighlight">
+\[
+Y_i = \beta_1X_{2i}^{\beta_2}X_{3i}^{\beta_3}e^{u_i}
+\]</div>
+<p>donde</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Y\)</span>: producción</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_2\)</span>: insumo trabajo</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_3\)</span>: insumo capital</p></li>
+<li><p><span class="math notranslate nohighlight">\(u\)</span>: término de perturbación</p></li>
+<li><p><span class="math notranslate nohighlight">\(e\)</span>: base del logaritmo</p></li>
+</ul>
+<p>Notemos que el modelo es multiplicativo, si tomamos la derivada obetenemos un modelo más famliar respecto a la regresión lineal múltiple:</p>
+<div class="math notranslate nohighlight">
+\[
+lnY_i = ln\beta_1 + \beta_2ln(X_{2i})+ \beta_3ln(X_{3i}) + u_i
+\]</div>
+<p>La interpretación de los coeficientes es <span id="id1">[]</span>:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\beta_2\)</span> es la elasticidad (parcial) de la producción respecto del insumo trabajo, es decir, mide el cambio porcentual en la producción debido a una variación de 1% en el insumo trabajo, con el insumo capital constante.</p></li>
+<li><p>De igual forma, <span class="math notranslate nohighlight">\(\beta_3\)</span> es la elasticidad (parcial) de la producción respecto del insumo capital, con el insumo trabajo constante.</p></li>
+<li><p>La suma (<span class="math notranslate nohighlight">\(\beta_2+\beta_3\)</span>) da información sobre los rendimientos a escala, es decir, la respuesta de la producción a un cambio proporcional en los insumos. Si esta suma es 1, existen rendimientos constantes a escala, es decir, la duplicación de los insumos duplica la producción, la triplicación de los insumos la triplica, y así sucesivamente. Si la suma es menor que 1, existen rendimientos decrecientes a escala: al duplicar los insumos, la producción crece en menos del doble. Por
+último, si la suma es mayor que 1, hay rendimientos crecientes a escala; la duplicación de los insumos aumenta la producción en más del doble.</p></li>
+</ol>
+<p>Abrir la <code class="docutils literal notranslate"><span class="pre">tabla</span> <span class="pre">7.3</span></code>. Regresar las horas de trabajo (<span class="math notranslate nohighlight">\(X_2\)</span>)  e Inversión de Capital (<span class="math notranslate nohighlight">\(X_3\)</span>) en el Valor Agregado (<span class="math notranslate nohighlight">\(Y\)</span>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.stats.api</span> <span class="k">as</span> <span class="nn">sms</span>
-<span class="kn">from</span> <span class="nn">statsmodels.compat</span> <span class="kn">import</span> <span class="n">lzip</span>
-<span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lagrange multiplier statistic&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;f-value&#39;</span><span class="p">,</span> <span class="s1">&#39;f p-value&#39;</span><span class="p">]</span>
-
-<span class="n">resultado</span> <span class="o">=</span> <span class="n">sms</span><span class="o">.</span><span class="n">het_breuschpagan</span><span class="p">(</span><span class="n">modelo2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="n">modelo2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog</span><span class="p">)</span>
-<span class="n">lzip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/tabla7_3.csv&quot;</span>
+<span class="n">datos</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">uu</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Lagrange multiplier statistic&#39;, 4.223239382300948),
- (&#39;p-value&#39;, 0.23834545740431537),
- (&#39;f-value&#39;, 1.4114976734901856),
- (&#39;f p-value&#39;, 0.2451463143967455)]
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Y</th>
+      <th>X2</th>
+      <th>X3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1965.000000</td>
+      <td>24735.333333</td>
+      <td>287.346667</td>
+      <td>25505.966667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>4.472136</td>
+      <td>4874.173486</td>
+      <td>14.806556</td>
+      <td>7334.889966</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1958.000000</td>
+      <td>16607.700000</td>
+      <td>267.000000</td>
+      <td>17803.700000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1961.500000</td>
+      <td>20618.800000</td>
+      <td>274.700000</td>
+      <td>19407.450000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1965.000000</td>
+      <td>26465.800000</td>
+      <td>288.100000</td>
+      <td>23445.200000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1968.500000</td>
+      <td>28832.100000</td>
+      <td>299.850000</td>
+      <td>30766.850000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1972.000000</td>
+      <td>31535.800000</td>
+      <td>307.500000</td>
+      <td>41794.300000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">X2</span><span class="p">)</span>
+
+<span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">X3</span><span class="p">)</span>
+
+<span class="n">LY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">Y</span><span class="p">)</span>
+
+<span class="n">reg_1</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;LY~W+K&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">reg_1</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">reg_1</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/victormorales/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/_stats_py.py:1736: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=15
+  warnings.warn(&quot;kurtosistest only valid for n&gt;=20 ... continuing &quot;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     LY   R-squared:                       0.889
+Model:                            OLS   Adj. R-squared:                  0.871
+Method:                 Least Squares   F-statistic:                     48.08
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.86e-06
+Time:                        01:15:26   Log-Likelihood:                 19.284
+No. Observations:                  15   AIC:                            -32.57
+Df Residuals:                      12   BIC:                            -30.44
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -3.3387      2.449     -1.363      0.198      -8.675       1.998
+W              1.4987      0.540      2.777      0.017       0.323       2.675
+K              0.4899      0.102      4.801      0.000       0.268       0.712
+==============================================================================
+Omnibus:                        3.290   Durbin-Watson:                   0.891
+Prob(Omnibus):                  0.193   Jarque-Bera (JB):                1.723
+Skew:                          -0.827   Prob(JB):                        0.422
+Kurtosis:                       3.141   Cond. No.                     1.51e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.51e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sum_sq</th>
+      <th>df</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>W</th>
+      <td>0.043141</td>
+      <td>1.0</td>
+      <td>7.710533</td>
+      <td>0.016750</td>
+    </tr>
+    <tr>
+      <th>K</th>
+      <td>0.128988</td>
+      <td>1.0</td>
+      <td>23.053747</td>
+      <td>0.000432</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>0.067141</td>
+      <td>12.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>Las elasticidades de la producción respecto del trabajo y el capital fueron 1.49 y 0.48 respectivamente.</p></li>
+</ul>
+<p>Ahora, si existen rendimientos constantes a escala (un cambio equi-proporcional en la producción ante un cambio equi-proporcional en los insumos), la teoría económica sugeriría que:</p>
+<div class="math notranslate nohighlight">
+\[
+\beta_2 +\beta_3 = 1
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LY_K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">Y</span><span class="o">/</span><span class="n">datos</span><span class="o">.</span><span class="n">X3</span><span class="p">)</span>
+<span class="n">W_K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">X2</span><span class="o">/</span><span class="n">datos</span><span class="o">.</span><span class="n">X3</span><span class="p">)</span>
+
+
+<span class="n">reg_2</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;LY_K~W_K&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reg_2</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">reg_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   LY_K   R-squared:                       0.570
+Model:                            OLS   Adj. R-squared:                  0.536
+Method:                 Least Squares   F-statistic:                     17.20
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):            0.00115
+Time:                        01:15:27   Log-Likelihood:                 16.965
+No. Observations:                  15   AIC:                            -29.93
+Df Residuals:                      13   BIC:                            -28.51
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      1.7083      0.416      4.108      0.001       0.810       2.607
+W_K            0.3870      0.093      4.147      0.001       0.185       0.589
+==============================================================================
+Omnibus:                        0.801   Durbin-Watson:                   0.601
+Prob(Omnibus):                  0.670   Jarque-Bera (JB):                0.749
+Skew:                          -0.431   Prob(JB):                        0.688
+Kurtosis:                       2.325   Cond. No.                         89.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/victormorales/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/_stats_py.py:1736: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=15
+  warnings.warn(&quot;kurtosistest only valid for n&gt;=20 ... continuing &quot;
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>W_K</th>
+      <td>1.0</td>
+      <td>0.121005</td>
+      <td>0.121005</td>
+      <td>17.19981</td>
+      <td>0.001147</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>13.0</td>
+      <td>0.091459</td>
+      <td>0.007035</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>¿Se cumple la hipótesis nula? ¿Existen rendimientos constantes de escala?</strong></p>
+<p>Una forma de responder a la pregunta es mediante la prueba <span class="math notranslate nohighlight">\(t\)</span>, para <span class="math notranslate nohighlight">\(Ho: \beta_2 +\beta_3 = 1\)</span>, tenemos</p>
+<div class="math notranslate nohighlight">
+\[
+t = \frac{(\hat{\beta}_2+\hat{\beta}_3)-(\beta_2+\beta_3)}{ee(\hat{\beta}_2+\hat{\beta}_3)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+t = \frac{(\hat{\beta}_2+\hat{\beta}_3)-1}{\sqrt{var(\hat{\beta}_2)+var(\hat{\beta}_3)+2cov(\hat{\beta}_2,\hat{\beta}_3})}
+\]</div>
+<p>donde la información nececesaria para obtener <span class="math notranslate nohighlight">\(cov(\hat{\beta}_2,\hat{\beta}_3)\)</span> en <code class="docutils literal notranslate"><span class="pre">Python</span></code> la librería <code class="docutils literal notranslate"><span class="pre">statsmodels.api</span></code> es <code class="docutils literal notranslate"><span class="pre">model.cov_params()</span></code> y <code class="docutils literal notranslate"><span class="pre">model</span></code> es el ajuste del modelo.</p>
+<p>Otra forma de hacer la prueba es mediante el estadístico <span class="math notranslate nohighlight">\(F\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+F = \frac{(SCE_{R}-SCE_{NR})/m}{SCR_{NR}/(n-k)}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(m\)</span> es el número de restricciones lineales y <span class="math notranslate nohighlight">\(k\)</span> es el número de parámetros de la regresión no restringida.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SCRNR</span> <span class="o">=</span> <span class="mf">0.0671410</span>  
+<span class="n">SCRRes</span> <span class="o">=</span> <span class="mf">0.09145854</span> 
+<span class="n">numero_rest</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">grad</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="n">est_F</span> <span class="o">=</span> <span class="p">((</span><span class="n">SCRRes</span><span class="o">-</span><span class="n">SCRNR</span><span class="p">)</span><span class="o">/</span><span class="n">numero_rest</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">SCRNR</span><span class="o">/</span><span class="n">grad</span><span class="p">)</span>
+<span class="n">est_F</span>
+
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">mif</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">est_F</span><span class="p">,</span><span class="n">dfn</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dfd</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">valorp</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">mif</span>
+<span class="nb">print</span><span class="p">([</span><span class="s2">&quot;Estadistico F: &quot;</span><span class="p">]</span> <span class="o">+</span><span class="p">[</span><span class="n">est_F</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([</span><span class="s2">&quot;Valor p: &quot;</span><span class="p">]</span> <span class="o">+</span><span class="p">[</span><span class="n">valorp</span><span class="p">])</span>
+<span class="c1">#cov_matrix = reg_1.cov_params()</span>
+<span class="c1">#print(cov_matrix)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Estadistico F: &#39;, 4.346233746890871]
+[&#39;Valor p: &#39;, 0.059121842231030675]
+</pre></div>
+</div>
+</div>
+</div>
+<p>No se tiene suficiente evidencia para rechazar la hipótesis nula de que sea una economía de escala.</p>
+<p>Notemos que existe una relación directa entre el coeficiente de determinación o bondad de ajuste <span class="math notranslate nohighlight">\(R^2\)</span> y <span class="math notranslate nohighlight">\(F\)</span>. En primero lugar, recordemos la descomposición de los errores:</p>
+<div class="math notranslate nohighlight">
+\[
+SCT = SCE + SCR
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=1}^{n}(Y-\bar{Y})^2 = \sum_{i=1}^{n}(\hat{Y}-\bar{Y})^2 + \sum_{i=1}^{n}(\hat{u})^2
+\]</div>
+<p>De cuyos elementos podemos obtener tanto <span class="math notranslate nohighlight">\(R^2\)</span> como <span class="math notranslate nohighlight">\(F\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+R^2 = \frac{SCE}{SCT}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F = \frac{SCE/(k-1)}{SCT/(n-k)}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(k\)</span> es el número de variables (incluido el intercepto) y sigue una distribución <span class="math notranslate nohighlight">\(F\)</span> con <span class="math notranslate nohighlight">\(k-1\)</span> y <span class="math notranslate nohighlight">\(n-k\)</span> grados de libertad.</p>
+</section>
+<section id="rlm-dicotomicas">
+<h3><span class="section-number">6.2.3. </span>RLM: Dicotómicas<a class="headerlink" href="#rlm-dicotomicas" title="Permalink to this heading">#</a></h3>
+<p>Abrir los datos <code class="docutils literal notranslate"><span class="pre">wage1</span></code> Correr los modelos. Se desea saber si el género tiene relación con el salario y en qué medida.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/wage1.csv&quot;</span>
+<span class="n">salarios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">uu</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> 
+
+<span class="n">salarios</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span>  <span class="p">[</span><span class="s2">&quot;wage&quot;</span><span class="p">,</span> <span class="s2">&quot;educ&quot;</span><span class="p">,</span> <span class="s2">&quot;exper&quot;</span><span class="p">,</span> <span class="s2">&quot;tenure&quot;</span><span class="p">,</span> <span class="s2">&quot;nonwhite&quot;</span><span class="p">,</span> <span class="s2">&quot;female&quot;</span><span class="p">,</span> <span class="s2">&quot;married&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;numdep&quot;</span><span class="p">,</span> <span class="s2">&quot;smsa&quot;</span><span class="p">,</span> <span class="s2">&quot;northcen&quot;</span><span class="p">,</span> <span class="s2">&quot;south&quot;</span><span class="p">,</span> <span class="s2">&quot;west&quot;</span><span class="p">,</span> <span class="s2">&quot;construc&quot;</span><span class="p">,</span> <span class="s2">&quot;ndurman&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;trcommpu&quot;</span><span class="p">,</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span> <span class="s2">&quot;services&quot;</span><span class="p">,</span>  <span class="s2">&quot;profserv&quot;</span><span class="p">,</span> <span class="s2">&quot;profocc&quot;</span><span class="p">,</span> <span class="s2">&quot;clerocc&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;servocc&quot;</span><span class="p">,</span> <span class="s2">&quot;lwage&quot;</span><span class="p">,</span> <span class="s2">&quot;expersq&quot;</span><span class="p">,</span> <span class="s2">&quot;tenursq&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg3</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;wage~female&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">salarios</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reg3</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+
+<span class="n">reg4</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;wage~female + educ+ exper + tenure&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">salarios</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reg4</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   wage   R-squared:                       0.116
+Model:                            OLS   Adj. R-squared:                  0.114
+Method:                 Least Squares   F-statistic:                     68.54
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.04e-15
+Time:                        01:15:27   Log-Likelihood:                -1400.7
+No. Observations:                 526   AIC:                             2805.
+Df Residuals:                     524   BIC:                             2814.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      7.0995      0.210     33.806      0.000       6.687       7.512
+female        -2.5118      0.303     -8.279      0.000      -3.108      -1.916
+==============================================================================
+Omnibus:                      223.488   Durbin-Watson:                   1.818
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              929.998
+Skew:                           1.928   Prob(JB):                    1.13e-202
+Kurtosis:                       8.250   Cond. No.                         2.57
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   wage   R-squared:                       0.364
+Model:                            OLS   Adj. R-squared:                  0.359
+Method:                 Least Squares   F-statistic:                     74.40
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           7.30e-50
+Time:                        01:15:27   Log-Likelihood:                -1314.2
+No. Observations:                 526   AIC:                             2638.
+Df Residuals:                     521   BIC:                             2660.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -1.5679      0.725     -2.164      0.031      -2.991      -0.145
+female        -1.8109      0.265     -6.838      0.000      -2.331      -1.291
+educ           0.5715      0.049     11.584      0.000       0.475       0.668
+exper          0.0254      0.012      2.195      0.029       0.003       0.048
+tenure         0.1410      0.021      6.663      0.000       0.099       0.183
+==============================================================================
+Omnibus:                      185.864   Durbin-Watson:                   1.794
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              715.580
+Skew:                           1.589   Prob(JB):                    4.11e-156
+Kurtosis:                       7.749   Cond. No.                         141.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>La hipótesis es saber si el coeficiente de <em>female</em> es menor a cero.</p></li>
+<li><p>Se nota que es menor.</p></li>
+<li><p>Tomando en cuenta, educacion experiencia y edad, en promedio a la mujer le pagan 1.81 menos</p></li>
+</ul>
 </section>
 <section id="rlm-educacion-con-insumos">
-<h3><span class="section-number">6.3.2. </span>RLM: Educación con insumos<a class="headerlink" href="#rlm-educacion-con-insumos" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.4. </span>RLM: Educación con insumos<a class="headerlink" href="#rlm-educacion-con-insumos" title="Permalink to this heading">#</a></h3>
+<p>Abrir los datos <code class="docutils literal notranslate"><span class="pre">gpa1</span></code> Correr los modelos.</p>
+<ul class="simple">
+<li><p>¿Afecta el promedio de calificaciones el tener o no una computadora?</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/gpa1.csv&quot;</span>
@@ -2684,8 +3140,8 @@ Notes:
 Dep. Variable:                 colGPA   R-squared:                       0.050
 Model:                            OLS   Adj. R-squared:                  0.043
 Method:                 Least Squares   F-statistic:                     7.314
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):            0.00770
-Time:                        12:05:17   Log-Likelihood:                -56.641
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):            0.00770
+Time:                        01:15:27   Log-Likelihood:                -56.641
 No. Observations:                 141   AIC:                             117.3
 Df Residuals:                     139   BIC:                             123.2
 Df Model:                           1                                         
@@ -2721,8 +3177,8 @@ Notes:
 Dep. Variable:                 colGPA   R-squared:                       0.219
 Model:                            OLS   Adj. R-squared:                  0.202
 Method:                 Least Squares   F-statistic:                     12.83
-Date:                Sun, 10 Dec 2023   Prob (F-statistic):           1.93e-07
-Time:                        12:05:17   Log-Likelihood:                -42.796
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.93e-07
+Time:                        01:15:27   Log-Likelihood:                -42.796
 No. Observations:                 141   AIC:                             93.59
 Df Residuals:                     137   BIC:                             105.4
 Df Model:                           3                                         
@@ -2747,6 +3203,1044 @@ Notes:
 </div>
 </div>
 </div>
+</section>
+<section id="rlm-cambio-estructural">
+<h3><span class="section-number">6.2.5. </span>RLM: Cambio estructural<a class="headerlink" href="#rlm-cambio-estructural" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Cuando utilizamos un modelo de regresión que implica series de tiempo, tal vez se dé un cambio estructural en la relación entre la regresada Y y las regresoras. Por cambio estructural nos referimos a que los valores de los parámetros del modelo no permanecen constantes a lo largo de todo el periodo <span id="id2">[]</span></p>
+</div></blockquote>
+<p>La tasa de desempleo civil alcanzó 9.7%, la más alta desde 1948. Un suceso como éste pudo perturbar la relación entre el ahorro y el IPD. Para ver si lo anterior sucedió, dividamos la muestra en dos periodos: 1970-1981 y 1982-1995, antes y después de la recesión de 1982.</p>
+<p>Ahora tenemos tres posibles regresiones:</p>
+<div class="math notranslate nohighlight" id="equation-chow1">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-chow1" title="Permalink to this equation">#</a></span>\[
+\text{1970-1981: } Y_t=\lambda_1+\lambda_2X_t+u_{1t}
+\]</div>
+<div class="math notranslate nohighlight" id="equation-chow2">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-chow2" title="Permalink to this equation">#</a></span>\[
+\text{1982-1995: } Y_t=\gamma_1+\gamma_2X_t+u_{2t}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{1970-1995: } Y_t=\alpha_1+\alpha_2X_t+u_{2t}
+\]</div>
+<p>De los períodos parciales se desprende cuatro posibilidades:</p>
+<a class="reference internal image-reference" href="_images/RL_Im5.png"><img alt="_images/RL_Im5.png" src="_images/RL_Im5.png" style="width: 600px; height: 300px;" /></a>
+<p>Para evaluar si hay diferencias, podemos utilizar los modelos de regresión con variables dicotómicas:</p>
+<div class="math notranslate nohighlight" id="equation-chow3">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-chow3" title="Permalink to this equation">#</a></span>\[
+Y_t = \alpha_1+\alpha_2D_t+\beta_1X_t+\beta_2(D_tX_t)+u_t
+\]</div>
+<p>donde</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Y\)</span>: ahorro</p></li>
+<li><p><span class="math notranslate nohighlight">\(X\)</span>: ingreso</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span>: tiempo</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: 1 para el período 1982-1995, 0 en otro caso.</p></li>
+</ul>
+<p>La variable dicotómica de la ecuación <a class="reference internal" href="#equation-chow3">(6.3)</a> es quien me permite estimar las ecuaciones <a class="reference internal" href="#equation-chow1">(6.1)</a> y <a class="reference internal" href="#equation-chow2">(6.2)</a> al <em>mismo tiempo</em>. Es decir:</p>
+<p>Función de ahorros medios para 1970-1981:</p>
+<div class="math notranslate nohighlight">
+\[
+E(Y_t|D_t=0,X_t) = \alpha_1+\beta_1X_t
+\]</div>
+<p>Función de ahorros medios para 1982-1995:</p>
+<div class="math notranslate nohighlight">
+\[
+E(Y_t|D_t=1,X_t) = (\alpha_1+\alpha_2)+(\beta_1+\beta_2)X_t
+\]</div>
+<p>Notemos que se trata de las mismas funciones que en <a class="reference internal" href="#equation-chow1">(6.1)</a> y <a class="reference internal" href="#equation-chow2">(6.2)</a>, con</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda_1=\alpha_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_2=\beta_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_1=(\alpha_1+\alpha_2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_2=(\beta_1+\beta_2)\)</span></p></li>
+</ul>
+<p>Abrir los <code class="docutils literal notranslate"><span class="pre">datos</span> <span class="pre">8.9</span></code>. Veamos las variables gráficamente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/tabla_8_9.csv&quot;</span>
+
+<span class="n">datos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">uu</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">datos</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;YEAR&#39;, &#39;SAVINGS&#39;, &#39;INCOME&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">INCOME</span><span class="p">,</span><span class="n">datos</span><span class="o">.</span><span class="n">SAVINGS</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ahorro VS Ingresos&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Ahorros&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Ingresos&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Ahorro VS Ingresos&#39;),
+ Text(0.5, 0, &#39;Ahorros&#39;),
+ Text(0, 0.5, &#39;Ingresos&#39;)]
+</pre></div>
+</div>
+<img alt="_images/9a1dec1e6b6b013f29ec84bb575845f0184b02f9ea740449ddf758af539421a4.png" src="_images/9a1dec1e6b6b013f29ec84bb575845f0184b02f9ea740449ddf758af539421a4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">YEAR</span><span class="p">,</span><span class="n">datos</span><span class="o">.</span><span class="n">SAVINGS</span><span class="p">,</span><span class="s2">&quot;--o&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ahorro VS Tiempo&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Año&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Ahorro&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Ahorro VS Tiempo&#39;),
+ Text(0.5, 0, &#39;Año&#39;),
+ Text(0, 0.5, &#39;Ahorro&#39;)]
+</pre></div>
+</div>
+<img alt="_images/bb758f6d3526bb2b3ee21827a9b717813e7d6badab55c5b43ed9ff933eccaecc.png" src="_images/bb758f6d3526bb2b3ee21827a9b717813e7d6badab55c5b43ed9ff933eccaecc.png" />
+</div>
+</div>
+<p>¿Hubo algún cambio en la relación entre ingreso y ahorro en el 80?</p>
+<ul class="simple">
+<li><p>Hay varias formas de hacer la prueba, la mas fácil es mediante variables dicotómicas</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_chow</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;SAVINGS~INCOME&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste_chow</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+
+<span class="n">cambio</span> <span class="o">=</span> <span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">YEAR</span><span class="o">&gt;</span><span class="mi">1981</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span>
+
+<span class="n">ajuste_chow</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;SAVINGS~INCOME+cambio&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste_chow</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                SAVINGS   R-squared:                       0.767
+Model:                            OLS   Adj. R-squared:                  0.758
+Method:                 Least Squares   F-statistic:                     79.10
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           4.61e-09
+Time:                        01:15:28   Log-Likelihood:                -125.24
+No. Observations:                  26   AIC:                             254.5
+Df Residuals:                      24   BIC:                             257.0
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     62.4227     12.761      4.892      0.000      36.086      88.760
+INCOME         0.0377      0.004      8.894      0.000       0.029       0.046
+==============================================================================
+Omnibus:                        1.662   Durbin-Watson:                   0.860
+Prob(Omnibus):                  0.436   Jarque-Bera (JB):                1.171
+Skew:                           0.515   Prob(JB):                        0.557
+Kurtosis:                       2.863   Cond. No.                     6.30e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.3e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                SAVINGS   R-squared:                       0.792
+Model:                            OLS   Adj. R-squared:                  0.774
+Method:                 Least Squares   F-statistic:                     43.76
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.45e-08
+Time:                        01:15:28   Log-Likelihood:                -123.78
+No. Observations:                  26   AIC:                             253.6
+Df Residuals:                      23   BIC:                             257.3
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     71.7059     13.546      5.294      0.000      43.685      99.727
+INCOME         0.0265      0.008      3.340      0.003       0.010       0.043
+cambio        37.8335     22.905      1.652      0.112      -9.549      85.216
+==============================================================================
+Omnibus:                        2.327   Durbin-Watson:                   1.046
+Prob(Omnibus):                  0.312   Jarque-Bera (JB):                1.671
+Skew:                           0.619   Prob(JB):                        0.434
+Kurtosis:                       2.899   Cond. No.                     1.22e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.22e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Veamos el modelo en términos de interacciones y la matriz de diseño:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_chow1</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;SAVINGS~INCOME+cambio+INCOME*cambio&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste_chow1</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                SAVINGS   R-squared:                       0.882
+Model:                            OLS   Adj. R-squared:                  0.866
+Method:                 Least Squares   F-statistic:                     54.78
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           2.27e-10
+Time:                        01:15:28   Log-Likelihood:                -116.41
+No. Observations:                  26   AIC:                             240.8
+Df Residuals:                      22   BIC:                             245.9
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P&gt;|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         1.0161     20.165      0.050      0.960     -40.803      42.835
+INCOME            0.0803      0.014      5.541      0.000       0.050       0.110
+cambio          152.4786     33.082      4.609      0.000      83.870     221.087
+INCOME:cambio    -0.0655      0.016     -4.096      0.000      -0.099      -0.032
+==============================================================================
+Omnibus:                        0.861   Durbin-Watson:                   1.648
+Prob(Omnibus):                  0.650   Jarque-Bera (JB):                0.596
+Skew:                           0.360   Prob(JB):                        0.742
+Kurtosis:                       2.822   Cond. No.                     3.24e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.24e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="rlm-supuestos">
+<h2><span class="section-number">6.3. </span>RLM: Supuestos<a class="headerlink" href="#rlm-supuestos" title="Permalink to this heading">#</a></h2>
+<section id="multicolinealidad">
+<h3><span class="section-number">6.3.1. </span>Multicolinealidad<a class="headerlink" href="#multicolinealidad" title="Permalink to this heading">#</a></h3>
+<p>El problema:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{\beta}=(X'X)^{-1}X'Y
+\]</div>
+<ul class="simple">
+<li><p>Se tiene un problema en cuanto a la transpuesta de la matriz <span class="math notranslate nohighlight">\((X'X)\)</span></p></li>
+<li><p>Perfecta: Si se tiene este tipo, el modelo simplemente no toma en cuenta esta variable</p></li>
+<li><p>Imperfecta: El cáclulo de la inversa es computacionalmente exigente</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/RL_Im4.png"><img alt="_images/RL_Im4.png" src="_images/RL_Im4.png" style="width: 600px; height: 300px;" /></a>
+<p>Posibles causas:</p>
+<ul class="simple">
+<li><p>El método de recolección de información</p></li>
+<li><p>Restricciones en el modelo o en la población objeto de muestreo</p></li>
+<li><p>Especificación del modelo</p></li>
+<li><p>Un modelo sobredetermindado</p></li>
+<li><p>Series de tiempo</p></li>
+</ul>
+<p>¿Cuál es la naturaleza de la multicolinealidad?</p>
+<p><strong>Causas</strong></p>
+<ul class="simple">
+<li><p>¿Cuáles son sus consecuencias prácticas?</p></li>
+</ul>
+<p><strong>Incidencia en los errores estándar y sensibilidad</strong></p>
+<ul class="simple">
+<li><p>¿Cómo se detecta?</p></li>
+</ul>
+<p><strong>Pruebas</strong></p>
+<p>¿Qué medidas pueden tomarse para aliviar el problema de multicolinealidad?</p>
+<ul class="simple">
+<li><p>No hacer nada</p></li>
+<li><p>Eliminar variables</p></li>
+<li><p>Transformación de variables</p></li>
+<li><p>Añadir datos a la muestra</p></li>
+<li><p>Componentes principales, factores, entre otros</p></li>
+</ul>
+<p>¿Cómo se detecta?</p>
+<ul class="simple">
+<li><p>Un <span class="math notranslate nohighlight">\(R^{2}\)</span> elevado pero con pocas razones <span class="math notranslate nohighlight">\(t\)</span> significativas</p></li>
+<li><p>Regresiones auxiliares (Pruebas de Klein)</p></li>
+<li><p>Factor de inflación de la varianza
+$<span class="math notranslate nohighlight">\(
+VIF = \frac{1}{(1-R^2)}
+\)</span>$</p></li>
+</ul>
+<p><strong>Ejemplo 1</strong></p>
+<ul class="simple">
+<li><p>Haremos uso del paquete AER</p></li>
+<li><p>Abrir la tabla 10.8</p></li>
+<li><p>Ajusta el modelo</p></li>
+</ul>
+<p>donde</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(X_1\)</span> índice implícito de deflación de precios para el PIB,</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_2\)</span> es el PIB (en millones de dólares),</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_3\)</span> número de desempleados (en miles),</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_4\)</span> número de personas enlistadas en las fuerzas armadas,</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_5\)</span> población no institucionalizada mayor de 14 años de edad</p></li>
+<li><p><span class="math notranslate nohighlight">\(X_6\)</span> año (igual a 1 para 1947, 2 para 1948 y 16 para 1962).</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+Y_{i} = \beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\beta_{3}X_{3} + \beta_{4}X_{4}+\beta_{5}X_{5}+u_{i}\nonumber
+\]</div>
+<ul class="simple">
+<li><p>Analice los resultados</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/GA/tabla10_8.csv&quot;</span>
+<span class="n">datos</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">uu</span><span class="p">,</span><span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">datos</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>obs</th>
+      <th>Y</th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>X3</th>
+      <th>X4</th>
+      <th>X5</th>
+      <th>TIME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+      <td>15.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1954.000000</td>
+      <td>64968.066667</td>
+      <td>1006.666667</td>
+      <td>376552.066667</td>
+      <td>3139.066667</td>
+      <td>2592.000000</td>
+      <td>116580.200000</td>
+      <td>8.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>4.472136</td>
+      <td>3335.820235</td>
+      <td>103.503393</td>
+      <td>91951.976996</td>
+      <td>940.825053</td>
+      <td>717.773741</td>
+      <td>6295.863769</td>
+      <td>4.472136</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1947.000000</td>
+      <td>60171.000000</td>
+      <td>830.000000</td>
+      <td>234289.000000</td>
+      <td>1870.000000</td>
+      <td>1456.000000</td>
+      <td>107608.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1950.500000</td>
+      <td>62204.000000</td>
+      <td>928.500000</td>
+      <td>306787.000000</td>
+      <td>2340.500000</td>
+      <td>2082.000000</td>
+      <td>111502.000000</td>
+      <td>4.500000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1954.000000</td>
+      <td>64989.000000</td>
+      <td>1000.000000</td>
+      <td>365385.000000</td>
+      <td>2936.000000</td>
+      <td>2637.000000</td>
+      <td>116219.000000</td>
+      <td>8.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1957.500000</td>
+      <td>68013.000000</td>
+      <td>1096.000000</td>
+      <td>443657.500000</td>
+      <td>3747.500000</td>
+      <td>3073.500000</td>
+      <td>121197.500000</td>
+      <td>11.500000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1961.000000</td>
+      <td>69564.000000</td>
+      <td>1157.000000</td>
+      <td>518173.000000</td>
+      <td>4806.000000</td>
+      <td>3594.000000</td>
+      <td>127852.000000</td>
+      <td>15.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Agreguemos el tiempo:</p>
+<ul class="simple">
+<li><p>Las correlaciones muy altas también suelen ser síntoma de multicolinealidad</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste2</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;Y~X1+X2+X3+X4+X5+TIME&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste2</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      Y   R-squared:                       0.996
+Model:                            OLS   Adj. R-squared:                  0.992
+Method:                 Least Squares   F-statistic:                     295.8
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           6.04e-09
+Time:                        01:15:29   Log-Likelihood:                -101.91
+No. Observations:                  15   AIC:                             217.8
+Df Residuals:                       8   BIC:                             222.8
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   6.727e+04   2.32e+04      2.895      0.020    1.37e+04    1.21e+05
+X1            -2.0511      8.710     -0.235      0.820     -22.136      18.034
+X2            -0.0273      0.033     -0.824      0.434      -0.104       0.049
+X3            -1.9523      0.477     -4.095      0.003      -3.052      -0.853
+X4            -0.9582      0.216     -4.432      0.002      -1.457      -0.460
+X5             0.0513      0.234      0.219      0.832      -0.488       0.591
+TIME        1585.1555    482.683      3.284      0.011     472.086    2698.225
+==============================================================================
+Omnibus:                        1.044   Durbin-Watson:                   2.492
+Prob(Omnibus):                  0.593   Jarque-Bera (JB):                0.418
+Skew:                           0.408   Prob(JB):                        0.811
+Kurtosis:                       2.929   Cond. No.                     1.23e+08
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.23e+08. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/victormorales/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/_stats_py.py:1736: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=15
+  warnings.warn(&quot;kurtosistest only valid for n&gt;=20 ... continuing &quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[[</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span><span class="s1">&#39;X4&#39;</span><span class="p">,</span><span class="s1">&#39;X5&#39;</span><span class="p">,</span><span class="s1">&#39;TIME&#39;</span><span class="p">]]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 0.99924002, 0.99943568, 0.99769462, 0.99320207,
+        0.99142138, 0.98987707, 0.99050446, 0.98686967, 0.98485669,
+        0.98283221, 0.98314407, 0.97959391, 0.97833135, 0.97770034],
+       [0.99924002, 1.        , 0.9999722 , 0.99957845, 0.99697832,
+        0.99575407, 0.99464953, 0.99510499, 0.99241202, 0.99086331,
+        0.98927457, 0.98951979, 0.98668154, 0.98565615, 0.98514016],
+       [0.99943568, 0.9999722 , 1.        , 0.99940088, 0.99649819,
+        0.99518861, 0.99401913, 0.99452176, 0.99168255, 0.99006487,
+        0.98841306, 0.9886863 , 0.98573357, 0.98467382, 0.98414795],
+       [0.99769462, 0.99957845, 0.99940088, 1.        , 0.99878987,
+        0.99797718, 0.99719881, 0.99754083, 0.99554183, 0.99433745,
+        0.99307333, 0.99328088, 0.99096573, 0.99011719, 0.9896916 ],
+       [0.99320207, 0.99697832, 0.99649819, 0.99878987, 1.        ,
+        0.99989587, 0.99966866, 0.99976654, 0.99895641, 0.99833471,
+        0.99761743, 0.99771787, 0.99631115, 0.99576088, 0.99547264],
+       [0.99142138, 0.99575407, 0.99518861, 0.99797718, 0.99989587,
+        1.        , 0.99993547, 0.99996501, 0.9995048 , 0.99905523,
+        0.99849979, 0.99857166, 0.99743196, 0.99697003, 0.99672361],
+       [0.98987707, 0.99464953, 0.99401913, 0.99719881, 0.99966866,
+        0.99993547, 1.        , 0.99997915, 0.99979584, 0.99948306,
+        0.99905612, 0.9991084 , 0.99817895, 0.99778718, 0.99757476],
+       [0.99050446, 0.99510499, 0.99452176, 0.99754083, 0.99976654,
+        0.99996501, 0.99997915, 1.        , 0.99970179, 0.99933544,
+        0.9988595 , 0.99893769, 0.9979167 , 0.99749814, 0.99727928],
+       [0.98686967, 0.99241202, 0.99168255, 0.99554183, 0.99895641,
+        0.9995048 , 0.99979584, 0.99970179, 1.        , 0.9999274 ,
+        0.99972691, 0.99975735, 0.99919068, 0.99892257, 0.9987745 ],
+       [0.98485669, 0.99086331, 0.99006487, 0.99433745, 0.99833471,
+        0.99905523, 0.99948306, 0.99933544, 0.9999274 , 1.        ,
+        0.99993587, 0.99994535, 0.999602  , 0.9994084 , 0.99929635],
+       [0.98283221, 0.98927457, 0.98841306, 0.99307333, 0.99761743,
+        0.99849979, 0.99905612, 0.9988595 , 0.99972691, 0.99993587,
+        1.        , 0.99999093, 0.99985693, 0.99973344, 0.99965577],
+       [0.98314407, 0.98951979, 0.9886863 , 0.99328088, 0.99771787,
+        0.99857166, 0.9991084 , 0.99893769, 0.99975735, 0.99994535,
+        0.99999093, 1.        , 0.99982617, 0.99969251, 0.99961536],
+       [0.97959391, 0.98668154, 0.98573357, 0.99096573, 0.99631115,
+        0.99743196, 0.99817895, 0.9979167 , 0.99919068, 0.999602  ,
+        0.99985693, 0.99982617, 1.        , 0.99998083, 0.99995641],
+       [0.97833135, 0.98565615, 0.98467382, 0.99011719, 0.99576088,
+        0.99697003, 0.99778718, 0.99749814, 0.99892257, 0.9994084 ,
+        0.99973344, 0.99969251, 0.99998083, 1.        , 0.99999438],
+       [0.97770034, 0.98514016, 0.98414795, 0.9896916 , 0.99547264,
+        0.99672361, 0.99757476, 0.99727928, 0.9987745 , 0.99929635,
+        0.99965577, 0.99961536, 0.99995641, 0.99999438, 1.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Prueba de Klein: Se basa en realizar regresiones auxiliares de <em>todas contra todas</em> las variables regresoras.</p></li>
+<li><p>Si el <span class="math notranslate nohighlight">\(R^{2}\)</span> de la regresión aux es mayor que la global, esa variable regresora podría ser la que genera multicolinealidad</p></li>
+<li><p>¿Cuántas regresiones auxiliares se tiene en un modelo en general?</p></li>
+</ul>
+<p>Regresemos una de las variables</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste3</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;X1~X2+X3+X4+X5+TIME&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste3</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+
+<span class="n">tolerancia</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">ajuste3</span><span class="o">.</span><span class="n">rsquared</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tolerancia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     X1   R-squared:                       0.992
+Model:                            OLS   Adj. R-squared:                  0.988
+Method:                 Least Squares   F-statistic:                     232.5
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           3.13e-09
+Time:                        01:15:29   Log-Likelihood:                -53.843
+No. Observations:                  15   AIC:                             119.7
+Df Residuals:                       9   BIC:                             123.9
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   1529.0038    728.794      2.098      0.065    -119.644    3177.651
+X2             0.0025      0.001      2.690      0.025       0.000       0.005
+X3             0.0306      0.015      2.019      0.074      -0.004       0.065
+X4             0.0101      0.008      1.337      0.214      -0.007       0.027
+X5            -0.0126      0.008     -1.598      0.145      -0.031       0.005
+TIME         -16.2146     17.665     -0.918      0.383     -56.175      23.745
+==============================================================================
+Omnibus:                        0.230   Durbin-Watson:                   1.897
+Prob(Omnibus):                  0.891   Jarque-Bera (JB):                0.104
+Skew:                          -0.153   Prob(JB):                        0.949
+Kurtosis:                       2.729   Cond. No.                     1.01e+08
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.01e+08. This might indicate that there are
+strong multicollinearity or other numerical problems.
+0.007681136875000938
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/victormorales/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/_stats_py.py:1736: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=15
+  warnings.warn(&quot;kurtosistest only valid for n&gt;=20 ... continuing &quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Factor de inflación de la varianza</strong></p>
+<p>Si este valor es mucho mayor que 10 y se podría concluir que si hay multicolinealidad</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vif</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">tolerancia</span>
+<span class="n">vif</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>130.18906136858521
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora vamos a usar el paquete <code class="docutils literal notranslate"><span class="pre">statsmodels.stats.outliers_influence</span></code>, la función <code class="docutils literal notranslate"><span class="pre">variance_inflation_factor</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="c1"># Para cada covariable, se calcla VIF y se almacena en un dataframe</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[[</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span><span class="s1">&#39;X4&#39;</span><span class="p">,</span><span class="s1">&#39;X5&#39;</span><span class="p">,</span><span class="s1">&#39;TIME&#39;</span><span class="p">]]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">vif</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="n">vif</span><span class="p">[</span><span class="s2">&quot;VIF Factor&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+<span class="n">vif</span><span class="p">[</span><span class="s2">&quot;Features&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">vif</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>VIF Factor</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>92681.7</td>
+      <td>const</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>130.2</td>
+      <td>X1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1490.7</td>
+      <td>X2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>32.2</td>
+      <td>X3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.9</td>
+      <td>X4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>347.6</td>
+      <td>X5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>746.5</td>
+      <td>TIME</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Raux</span> <span class="o">=</span> <span class="p">(</span><span class="n">vif</span><span class="p">[[</span><span class="s2">&quot;VIF Factor&quot;</span><span class="p">]]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">vif</span><span class="p">[[</span><span class="s2">&quot;VIF Factor&quot;</span><span class="p">]]</span>
+<span class="n">Rglobal</span> <span class="o">=</span> <span class="n">ajuste2</span><span class="o">.</span><span class="n">rsquared</span>
+<span class="n">Raux</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Rglobal</span><span class="o">-</span><span class="n">Raux</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   VIF Factor
+0   -0.004477
+1    0.003193
+2   -0.003817
+3    0.026546
+4    0.254661
+5   -0.001611
+6   -0.003148
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se podría no hacer nada ante este problema. O se puede tratar con transformaciones. Deflactamos el PIB: <code class="docutils literal notranslate"><span class="pre">PIB_REAL</span> <span class="pre">=</span> <span class="pre">X2/X1</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="p">[</span><span class="s1">&#39;PIB_REAL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">X2</span><span class="o">/</span><span class="n">datos</span><span class="o">.</span><span class="n">X1</span>
+<span class="n">ajuste4</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;Y~PIB_REAL+X3+X4&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste4</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[[</span><span class="s1">&#39;PIB_REAL&#39;</span><span class="p">,</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span><span class="s1">&#39;X4&#39;</span><span class="p">]]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">vif</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="n">vif</span><span class="p">[</span><span class="s2">&quot;VIF Factor&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+<span class="n">vif</span><span class="p">[</span><span class="s2">&quot;Features&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">vif</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      Y   R-squared:                       0.989
+Model:                            OLS   Adj. R-squared:                  0.986
+Method:                 Least Squares   F-statistic:                     339.5
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           4.04e-11
+Time:                        01:15:29   Log-Likelihood:                -108.41
+No. Observations:                  15   AIC:                             224.8
+Df Residuals:                      11   BIC:                             227.7
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   4.272e+04    710.121     60.154      0.000    4.12e+04    4.43e+04
+PIB_REAL      72.0074      3.329     21.633      0.000      64.681      79.334
+X3            -0.6810      0.169     -4.023      0.002      -1.054      -0.308
+X4            -0.8392      0.221     -3.805      0.003      -1.325      -0.354
+==============================================================================
+Omnibus:                        1.050   Durbin-Watson:                   2.026
+Prob(Omnibus):                  0.592   Jarque-Bera (JB):                0.381
+Skew:                          -0.390   Prob(JB):                        0.827
+Kurtosis:                       2.970   Cond. No.                     2.94e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.94e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/victormorales/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/_stats_py.py:1736: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=15
+  warnings.warn(&quot;kurtosistest only valid for n&gt;=20 ... continuing &quot;
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>VIF Factor</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>50.0</td>
+      <td>const</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.1</td>
+      <td>PIB_REAL</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2.3</td>
+      <td>X3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.3</td>
+      <td>X4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="heterocedasticidad">
+<h3><span class="section-number">6.3.2. </span>Heterocedasticidad<a class="headerlink" href="#heterocedasticidad" title="Permalink to this heading">#</a></h3>
+<p>Ocurre cuando la varianza no es constante.</p>
+<p>¿Cuál es la naturaleza de la heterocedasticidad?</p>
+<ul class="simple">
+<li><p>Modelos de aprendizaje de los errores: con el paso del tiempo, las personas cometen menos errores de comportamiento. Es decir que la varianza disminuye.</p></li>
+<li><p>Ingreso direccional: Es probable que la varianza aumente con el ingreso dado que el aumento del ingreso se tiene más opciones del cómo disponer de él.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/RL_5.png"><img alt="_images/RL_5.png" src="_images/RL_5.png" style="width: 600px; height: 300px;" /></a>
+<ul class="simple">
+<li><p>Técnicas de recolección de datos: si la técnica mejora, es probable que la varianza se reduzca.</p></li>
+<li><p>Datos atípicos o aberrantes: Sensibilidad en las estimaciones</p></li>
+<li><p>Especificaciones del modelo: Omisión de variables importantes en el modelo.</p></li>
+<li><p>Asimentría: Surge a partir de la distribución de una o más regresoras en el modelo. Ejemplo: Distribución del ingreso <em>generalmente inequitativo</em></p></li>
+</ul>
+<section id="como-detectarla">
+<h4><span class="section-number">6.3.2.1. </span>¿Cómo detectarla?<a class="headerlink" href="#como-detectarla" title="Permalink to this heading">#</a></h4>
+<p>Método gráfico</p>
+<a class="reference internal image-reference" href="_images/RL_Im6.png"><img alt="_images/RL_Im6.png" src="_images/RL_Im6.png" style="width: 600px; height: 300px;" /></a>
+<p>Veamos las pruebas de detección en un ejemplo</p>
+<ul class="simple">
+<li><p>Abrir la base de datos <em>wage1</em> de Wooldrigde</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uu</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/vmoprojs/DataLectures/master/WO/wage1.csv&quot;</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">uu</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">datos</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;wage&quot;</span><span class="p">,</span>  <span class="s2">&quot;educ&quot;</span><span class="p">,</span>  <span class="s2">&quot;exper&quot;</span><span class="p">,</span>  <span class="s2">&quot;tenure&quot;</span><span class="p">,</span>    
+               <span class="s2">&quot;nonwhite&quot;</span><span class="p">,</span><span class="s2">&quot;female&quot;</span><span class="p">,</span><span class="s2">&quot;married&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;numdep&quot;</span><span class="p">,</span><span class="s2">&quot;smsa&quot;</span><span class="p">,</span><span class="s2">&quot;northcen&quot;</span><span class="p">,</span><span class="s2">&quot;south&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;west&quot;</span><span class="p">,</span><span class="s2">&quot;construc&quot;</span><span class="p">,</span><span class="s2">&quot;ndurman&quot;</span><span class="p">,</span><span class="s2">&quot;trcommpu&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;trade&quot;</span><span class="p">,</span><span class="s2">&quot;services&quot;</span><span class="p">,</span><span class="s2">&quot;profserv&quot;</span><span class="p">,</span><span class="s2">&quot;profocc&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;clerocc&quot;</span><span class="p">,</span><span class="s2">&quot;servocc&quot;</span><span class="p">,</span><span class="s2">&quot;lwage&quot;</span><span class="p">,</span><span class="s2">&quot;expersq&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;tenursq&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;casados&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">datos</span><span class="o">.</span><span class="n">female</span><span class="p">)</span><span class="o">*</span><span class="n">datos</span><span class="o">.</span><span class="n">married</span>  <span class="c1"># female 1=mujer  married=1 casado</span>
+<span class="n">datos</span><span class="p">[</span><span class="s2">&quot;casadas&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">female</span><span class="p">)</span><span class="o">*</span><span class="n">datos</span><span class="o">.</span><span class="n">married</span>
+<span class="n">datos</span><span class="p">[</span><span class="s2">&quot;solteras&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">female</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">datos</span><span class="o">.</span><span class="n">married</span><span class="p">)</span>
+<span class="n">datos</span><span class="p">[</span><span class="s2">&quot;solteros&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">datos</span><span class="o">.</span><span class="n">female</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">datos</span><span class="o">.</span><span class="n">married</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Correr el modelo
+$<span class="math notranslate nohighlight">\(
+lwage = \beta_{0}+\beta_{1}casados+\beta_{2}casadas+\beta_{3}solteras +\beta_{4}educ+\beta_{5}exper+\beta_{6}expersq +\beta_{7}tenure+\beta_{8}tenuresq+u_{i}
+\)</span>$</p></li>
+</ul>
+<ul class="simple">
+<li><p>Hacer un gráfico de los valores  estimados y los residuos al cuadrado</p></li>
+</ul>
+</section>
+<section id="prueba-de-breusch-pagan">
+<h4><span class="section-number">6.3.2.2. </span>Prueba de Breusch Pagan<a class="headerlink" href="#prueba-de-breusch-pagan" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Correr un modelo de los residuos al cuadrado regresado en las variables explicativas del modelo global.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+sqresid = \beta_{0}+\beta_{1}casados+\beta_{2}casadas+\beta_{3}solteras +\beta_{4}educ+\beta_{5}exper+\beta_{6}expersq +\beta_{7}tenure+\beta_{8}tenuresq+u_{i}
+\]</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">het_breuschpagan</span></code>: si el pvalor es inferior a <span class="math notranslate nohighlight">\(0.05\)</span>, <code class="docutils literal notranslate"><span class="pre">Ho:</span> <span class="pre">Homocedasticidad</span></code></p></li>
+</ul>
+<p>El códgio en <code class="docutils literal notranslate"><span class="pre">Python</span></code> sería:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste1</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;lwage~casados+casadas+solteras+educ+exper+expersq+tenure+tenursq&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">residuos</span> <span class="o">=</span> <span class="n">ajuste1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">resid</span>
+<span class="n">sqresid</span> <span class="o">=</span> <span class="n">residuos</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">y_techo</span> <span class="o">=</span> <span class="n">ajuste1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">fittedvalues</span>
+<span class="c1">#https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.RegressionResults.html#statsmodels.regression.linear_model.RegressionResults</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y_techo</span><span class="p">,</span><span class="n">sqresid</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;y techo&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Residuos&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  lwage   R-squared:                       0.461
+Model:                            OLS   Adj. R-squared:                  0.453
+Method:                 Least Squares   F-statistic:                     55.25
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):           1.28e-64
+Time:                        01:15:29   Log-Likelihood:                -250.96
+No. Observations:                 526   AIC:                             519.9
+Df Residuals:                     517   BIC:                             558.3
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.3214      0.100      3.213      0.001       0.125       0.518
+casados        0.2127      0.055      3.842      0.000       0.104       0.321
+casadas       -0.1983      0.058     -3.428      0.001      -0.312      -0.085
+solteras      -0.1104      0.056     -1.980      0.048      -0.220      -0.001
+educ           0.0789      0.007     11.787      0.000       0.066       0.092
+exper          0.0268      0.005      5.112      0.000       0.017       0.037
+expersq       -0.0005      0.000     -4.847      0.000      -0.001      -0.000
+tenure         0.0291      0.007      4.302      0.000       0.016       0.042
+tenursq       -0.0005      0.000     -2.306      0.022      -0.001   -7.89e-05
+==============================================================================
+Omnibus:                       15.526   Durbin-Watson:                   1.785
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               32.182
+Skew:                          -0.062   Prob(JB):                     1.03e-07
+Kurtosis:                       4.205   Cond. No.                     4.86e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.86e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;&#39;), Text(0.5, 0, &#39;y techo&#39;), Text(0, 0.5, &#39;Residuos&#39;)]
+</pre></div>
+</div>
+<img alt="_images/b5ecb366c3345ac9ddd7d4f6d6983687d1bd3bb7ec1f375e429a745577202077.png" src="_images/b5ecb366c3345ac9ddd7d4f6d6983687d1bd3bb7ec1f375e429a745577202077.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test para ver si hay heterocedasticidad</span>
+<span class="n">ajuste2</span> <span class="o">=</span> <span class="n">stm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;sqresid~casados+casadas+solteras+educ+exper+expersq+tenure+tenursq&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">datos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                sqresid   R-squared:                       0.025
+Model:                            OLS   Adj. R-squared:                  0.010
+Method:                 Least Squares   F-statistic:                     1.662
+Date:                Wed, 13 Dec 2023   Prob (F-statistic):              0.105
+Time:                        01:15:29   Log-Likelihood:                -55.216
+No. Observations:                 526   AIC:                             128.4
+Df Residuals:                     517   BIC:                             166.8
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.0503      0.069      0.729      0.466      -0.085       0.186
+casados       -0.0487      0.038     -1.276      0.202      -0.124       0.026
+casadas       -0.0515      0.040     -1.291      0.197      -0.130       0.027
+solteras       0.0042      0.038      0.108      0.914      -0.071       0.080
+educ           0.0038      0.005      0.834      0.405      -0.005       0.013
+exper          0.0101      0.004      2.790      0.005       0.003       0.017
+expersq       -0.0002   7.61e-05     -2.720      0.007      -0.000   -5.75e-05
+tenure         0.0005      0.005      0.102      0.919      -0.009       0.010
+tenursq      8.67e-05      0.000      0.544      0.587      -0.000       0.000
+==============================================================================
+Omnibus:                      624.508   Durbin-Watson:                   1.947
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            68316.816
+Skew:                           5.530   Prob(JB):                         0.00
+Kurtosis:                      57.725   Cond. No.                     4.86e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.86e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ajuste2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">fvalue</span><span class="p">)</span><span class="c1"># Estaditistico F</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ajuste2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">f_pvalue</span><span class="p">)</span><span class="c1"># ovalor de F</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.66213192035643
+0.1049935552326956
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.stats.api</span> <span class="k">as</span> <span class="nn">sms</span>
+<span class="kn">from</span> <span class="nn">statsmodels.compat</span> <span class="kn">import</span> <span class="n">lzip</span>
+<span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lagrange multiplier statistic&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;f-value&#39;</span><span class="p">,</span> <span class="s1">&#39;f p-value&#39;</span><span class="p">]</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">sms</span><span class="o">.</span><span class="n">het_breuschpagan</span><span class="p">(</span><span class="n">ajuste1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span><span class="n">ajuste1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog</span><span class="p">)</span>
+<span class="n">lzip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Lagrange multiplier statistic&#39;, 13.189307860806634),
+ (&#39;p-value&#39;, 0.10549999125863747),
+ (&#39;f-value&#39;, 1.66213192035643),
+ (&#39;f p-value&#39;, 0.1049935552326956)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para estimar errores robustos (como <code class="docutils literal notranslate"><span class="pre">robust</span></code> en stata):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">HC0_se</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept    0.108528
+casados      0.056651
+casadas      0.058265
+solteras     0.056626
+educ         0.007351
+exper        0.005095
+expersq      0.000105
+tenure       0.006881
+tenursq      0.000242
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 </section>
@@ -2816,18 +4310,27 @@ Notes:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incorporando-no-linealidades-en-la-regresion-simple">6.1.1. Incorporando no linealidades en la regresión simple</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-paridad-del-poder-de-compra">6.1.2. Práctica: Paridad del poder de compra</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-sueno">6.1.3. Práctica: Sueño</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">6.1.4. Transformaciones lineales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">6.1.5. Modelo reciproco</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">6.1.6. Modelo log-lineal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">6.1.7. Regresión a través del origen</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformaciones-lineales">6.2. Transformaciones lineales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-reciproco">6.2.1. Modelo reciproco</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-log-lineal">6.2.2. Modelo log-lineal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-a-traves-del-origen">6.2.3. Regresión a través del origen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heterocedasticidad">6.2.4. Heterocedasticidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">6.2. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">6.2.1. Predicción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-cobb-douglas">6.2.2. RLM: Cobb-Douglas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-dicotomicas">6.2.3. RLM: Dicotómicas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">6.2.4. RLM: Educación con insumos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-cambio-estructural">6.2.5. RLM: Cambio estructural</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-lineal-multiple">6.3. Regresión Lineal Múltiple</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediccion">6.3.1. Predicción</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-educacion-con-insumos">6.3.2. RLM: Educación con insumos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlm-supuestos">6.3. RLM: Supuestos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multicolinealidad">6.3.1. Multicolinealidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heterocedasticidad">6.3.2. Heterocedasticidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#como-detectarla">6.3.2.1. ¿Cómo detectarla?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prueba-de-breusch-pagan">6.3.2.2. Prueba de Breusch Pagan</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
