@@ -6,6 +6,12 @@ Este documento está en construcción. Tiene por objetivo recoger material neces
 
 En la medida de lo posible el documento trabaja con datos de Ecuador. Además, el software utilizado para su desarrollo es `Python`.
 
+## Material del autor en Python
+
+- [Econometría Espacial con Python](https://vmoprojs.github.io/SpatialEconPython/intro.html)
+- [Introducción a la Econometría](https://vmoprojs.github.io/IntroEconometricsWO/intro.html)
+
+
 ## Material del autor en R
 
 -   [Técnicas de Machine Learning con R](https://bookdown.org/victor_morales/TecnicasML/)
@@ -15,6 +21,11 @@ En la medida de lo posible el documento trabaja con datos de Ecuador. Además, e
 -   [Econometría Espacial](https://bookdown.org/victor_morales/SpatialEconometrics/)
 
 -   [Métodos de evaluación de impacto](https://bookdown.org/victor_morales/ImpactEvaluation/)
+
+## Contacto
+
+-	LinkedIn: <https://www.linkedin.com/in/vmoralesonate/>
+-	Correo: <victor.morales@uv.cl>
 
 ```{tableofcontents}
 ```
